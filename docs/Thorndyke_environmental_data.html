@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Environmental data from auquaculture - Thorndyke Bay environmental data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar docked fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Thorndyke_environmental_data.html">Data</a></li><li class="breadcrumb-item"><a href="./Thorndyke_environmental_data.html">Thorndyke Bay environmental data</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Environmental data from auquaculture</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Basics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Environmental data from aquaculture</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Thorndyke_environmental_data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Thorndyke Bay environmental data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Hood_head_environmental_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hood Head environmental data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chelsea_environmental_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chelsea environmental data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Manchester_environmental_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Manchester environmental data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Thorndyke Bay environmental data</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Data is going to be shown here</p>
+<section id="site-information" class="level1">
+<h1>Site information</h1>
+<p>I will change the basemap here so you can zoom in more</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-d52c0ba8c0b12bc0a1eb" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d52c0ba8c0b12bc0a1eb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[47.808739,-122.738067,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Thorndyke Bay, Baywater Shellfish - UW<\/b><br/>\n                           Data: Disolved oxygen, temperature, salinity<br/>\n                           Contact: Craig Norrie",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[47.809411,-122.735507,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Thorndyke Bay, Baywater Shellfish - UW<\/b><br/>\n                           Data: data link<br/>\n                           Contact: PSI",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[47.809131,-122.734758,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"<b>Thorndyke Bay, Baywater Shellfish - UW<\/b><br/>\n                           Data: Seaweed<br/>\n                           Contact: Seaweed",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[47.808739,47.809411],"lng":[-122.738067,-122.734758]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><br>Here will be a link to the raw data<br></p>
+<section id="temperature-data" class="level2">
+<h2 class="anchored" data-anchor-id="temperature-data">Temperature data</h2>
+<p>Temperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. <br></p>
+<p>We can include additional lines with differtent colours for each of the locations within thorndyke to compare.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-59b64ed123e5e8f09a5e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-59b64ed123e5e8f09a5e">{"x":{"data":[{"x":[19513,19514,19515,19516,19517,19518,19519,19520,19521,19522,19523,19524,19525,19526,19527,19528,19529,19530,19531,19532,19533,19534,19535,19536,19537,19538,19539,19540,19541,19542,19543,19544,19545,19546,19547,19548,19549,19550,19551,19552,19553,19554,19555,19556,19557,19558,19559,19560,19561,19562,19563,19564,19565,19566,19567,19568,19569,19570,19571,19572,19573,19574,19575,19576,19577,19578,19579,19580,19581,19582,19583,19584,19585,19586,19587,19588,19589,19590,19591,19592,19593,19594,19595,19596,19597,19598,19599,19600,19601,19602,19603,19604,19605,19606,19607,19608,19609,19610,19611,19612,19613,19614,19615,19616,19617,19618,19619,19620,19621,19622,19623,19624,19625,19626,19627,19628,19629,19630,19631,19632,19633,19634,19635,19636,19637,19638,19639,19640,19641,19642,19643,19644,19645,19646,19647,19648,19649,19650],"y":[13.033684210526316,14.490208333333333,14.854583333333334,16.854375000000001,14.999375000000001,15.289166666666667,15.142916666666666,15.167708333333334,14.335833333333333,14.577500000000001,14.033333333333333,15.894583333333333,13.1675,12.738541666666666,13.208333333333334,12.927083333333334,15.657083333333333,15.847916666666666,14.958541666666667,14.697708333333333,15.861041666666667,15.796041666666667,16.483125000000001,17.665624999999999,18.338333333333335,18.063541666666666,16.727083333333333,15.817708333333334,15.341875,15.549375,15.576041666666667,16.42625,17.424791666666668,17.920625000000001,16.962499999999999,15.574166666666667,16.061875000000001,16.257916666666667,17.164999999999999,17.306875000000002,16.830833333333334,16.068333333333332,15.793749999999999,15.997291666666667,16.082083333333333,17.203125,18.372291666666666,18.121041666666667,17.618333333333332,16.234791666666666,16.310833333333335,17.277083333333334,16.727083333333333,16.919374999999999,15.6975,15.785,16.569166666666668,15.977499999999999,16.284900662251655,16.105833333333333,16.185833333333335,14.7575,15.098541666666666,15.925000000000001,16.519791666666666,15.77,15.722291666666667,15.678958333333334,16.722916666666666,17.271249999999998,17.133749999999999,16.320416666666667,16.643125000000001,17.027291666666667,16.451250000000002,16.552708333333332,15.565416666666666,15.027291666666667,15.243958333333333,16.342500000000001,16.392916666666668,15.3775,14.990833333333333,15.105625,15.000833333333333,14.790625,15.087708333333333,14.776249999999999,15.162708333333333,14.540208333333334,13.518333333333333,14.372083333333332,14.428541666666666,14.621666666666666,14.915208333333334,14.661041666666666,14.564375,14.836666666666666,14.240833333333333,14.362083333333333,15.004791666666666,15.109791666666666,14.295416666666666,13.827916666666667,13.475416666666666,13.280208333333333,13.3375,13.731458333333332,13.023333333333333,12.658958333333333,12.751250000000001,12.487500000000001,13.042708333333334,12.655208333333333,12.604583333333334,12.748749999999999,12.372916666666667,11.901666666666667,11.529583333333333,11.764166666666666,12.413125000000001,12.616666666666667,12.773541666666667,12.220000000000001,12.052708333333333,12.450625,12.788333333333334,12.491250000000001,12.342291666666666,12.212916666666667,12.117291666666667,11.99,12.04875,11.961041666666667,11.471666666666668,11.852916666666667,11.476041666666667,14.617391304347827],"text":["date: 2023-06-05<br />meantemp: 13.03368","date: 2023-06-06<br />meantemp: 14.49021","date: 2023-06-07<br />meantemp: 14.85458","date: 2023-06-08<br />meantemp: 16.85438","date: 2023-06-09<br />meantemp: 14.99938","date: 2023-06-10<br />meantemp: 15.28917","date: 2023-06-11<br />meantemp: 15.14292","date: 2023-06-12<br />meantemp: 15.16771","date: 2023-06-13<br />meantemp: 14.33583","date: 2023-06-14<br />meantemp: 14.57750","date: 2023-06-15<br />meantemp: 14.03333","date: 2023-06-16<br />meantemp: 15.89458","date: 2023-06-17<br />meantemp: 13.16750","date: 2023-06-18<br />meantemp: 12.73854","date: 2023-06-19<br />meantemp: 13.20833","date: 2023-06-20<br />meantemp: 12.92708","date: 2023-06-21<br />meantemp: 15.65708","date: 2023-06-22<br />meantemp: 15.84792","date: 2023-06-23<br />meantemp: 14.95854","date: 2023-06-24<br />meantemp: 14.69771","date: 2023-06-25<br />meantemp: 15.86104","date: 2023-06-26<br />meantemp: 15.79604","date: 2023-06-27<br />meantemp: 16.48313","date: 2023-06-28<br />meantemp: 17.66562","date: 2023-06-29<br />meantemp: 18.33833","date: 2023-06-30<br />meantemp: 18.06354","date: 2023-07-01<br />meantemp: 16.72708","date: 2023-07-02<br />meantemp: 15.81771","date: 2023-07-03<br />meantemp: 15.34187","date: 2023-07-04<br />meantemp: 15.54937","date: 2023-07-05<br />meantemp: 15.57604","date: 2023-07-06<br />meantemp: 16.42625","date: 2023-07-07<br />meantemp: 17.42479","date: 2023-07-08<br />meantemp: 17.92063","date: 2023-07-09<br />meantemp: 16.96250","date: 2023-07-10<br />meantemp: 15.57417","date: 2023-07-11<br />meantemp: 16.06188","date: 2023-07-12<br />meantemp: 16.25792","date: 2023-07-13<br />meantemp: 17.16500","date: 2023-07-14<br />meantemp: 17.30688","date: 2023-07-15<br />meantemp: 16.83083","date: 2023-07-16<br />meantemp: 16.06833","date: 2023-07-17<br />meantemp: 15.79375","date: 2023-07-18<br />meantemp: 15.99729","date: 2023-07-19<br />meantemp: 16.08208","date: 2023-07-20<br />meantemp: 17.20312","date: 2023-07-21<br />meantemp: 18.37229","date: 2023-07-22<br />meantemp: 18.12104","date: 2023-07-23<br />meantemp: 17.61833","date: 2023-07-24<br />meantemp: 16.23479","date: 2023-07-25<br />meantemp: 16.31083","date: 2023-07-26<br />meantemp: 17.27708","date: 2023-07-27<br />meantemp: 16.72708","date: 2023-07-28<br />meantemp: 16.91937","date: 2023-07-29<br />meantemp: 15.69750","date: 2023-07-30<br />meantemp: 15.78500","date: 2023-07-31<br />meantemp: 16.56917","date: 2023-08-01<br />meantemp: 15.97750","date: 2023-08-02<br />meantemp: 16.28490","date: 2023-08-03<br />meantemp: 16.10583","date: 2023-08-04<br />meantemp: 16.18583","date: 2023-08-05<br />meantemp: 14.75750","date: 2023-08-06<br />meantemp: 15.09854","date: 2023-08-07<br />meantemp: 15.92500","date: 2023-08-08<br />meantemp: 16.51979","date: 2023-08-09<br />meantemp: 15.77000","date: 2023-08-10<br />meantemp: 15.72229","date: 2023-08-11<br />meantemp: 15.67896","date: 2023-08-12<br />meantemp: 16.72292","date: 2023-08-13<br />meantemp: 17.27125","date: 2023-08-14<br />meantemp: 17.13375","date: 2023-08-15<br />meantemp: 16.32042","date: 2023-08-16<br />meantemp: 16.64313","date: 2023-08-17<br />meantemp: 17.02729","date: 2023-08-18<br />meantemp: 16.45125","date: 2023-08-19<br />meantemp: 16.55271","date: 2023-08-20<br />meantemp: 15.56542","date: 2023-08-21<br />meantemp: 15.02729","date: 2023-08-22<br />meantemp: 15.24396","date: 2023-08-23<br />meantemp: 16.34250","date: 2023-08-24<br />meantemp: 16.39292","date: 2023-08-25<br />meantemp: 15.37750","date: 2023-08-26<br />meantemp: 14.99083","date: 2023-08-27<br />meantemp: 15.10562","date: 2023-08-28<br />meantemp: 15.00083","date: 2023-08-29<br />meantemp: 14.79063","date: 2023-08-30<br />meantemp: 15.08771","date: 2023-08-31<br />meantemp: 14.77625","date: 2023-09-01<br />meantemp: 15.16271","date: 2023-09-02<br />meantemp: 14.54021","date: 2023-09-03<br />meantemp: 13.51833","date: 2023-09-04<br />meantemp: 14.37208","date: 2023-09-05<br />meantemp: 14.42854","date: 2023-09-06<br />meantemp: 14.62167","date: 2023-09-07<br />meantemp: 14.91521","date: 2023-09-08<br />meantemp: 14.66104","date: 2023-09-09<br />meantemp: 14.56438","date: 2023-09-10<br />meantemp: 14.83667","date: 2023-09-11<br />meantemp: 14.24083","date: 2023-09-12<br />meantemp: 14.36208","date: 2023-09-13<br />meantemp: 15.00479","date: 2023-09-14<br />meantemp: 15.10979","date: 2023-09-15<br />meantemp: 14.29542","date: 2023-09-16<br />meantemp: 13.82792","date: 2023-09-17<br />meantemp: 13.47542","date: 2023-09-18<br />meantemp: 13.28021","date: 2023-09-19<br />meantemp: 13.33750","date: 2023-09-20<br />meantemp: 13.73146","date: 2023-09-21<br />meantemp: 13.02333","date: 2023-09-22<br />meantemp: 12.65896","date: 2023-09-23<br />meantemp: 12.75125","date: 2023-09-24<br />meantemp: 12.48750","date: 2023-09-25<br />meantemp: 13.04271","date: 2023-09-26<br />meantemp: 12.65521","date: 2023-09-27<br />meantemp: 12.60458","date: 2023-09-28<br />meantemp: 12.74875","date: 2023-09-29<br />meantemp: 12.37292","date: 2023-09-30<br />meantemp: 11.90167","date: 2023-10-01<br />meantemp: 11.52958","date: 2023-10-02<br />meantemp: 11.76417","date: 2023-10-03<br />meantemp: 12.41313","date: 2023-10-04<br />meantemp: 12.61667","date: 2023-10-05<br />meantemp: 12.77354","date: 2023-10-06<br />meantemp: 12.22000","date: 2023-10-07<br />meantemp: 12.05271","date: 2023-10-08<br />meantemp: 12.45063","date: 2023-10-09<br />meantemp: 12.78833","date: 2023-10-10<br />meantemp: 12.49125","date: 2023-10-11<br />meantemp: 12.34229","date: 2023-10-12<br />meantemp: 12.21292","date: 2023-10-13<br />meantemp: 12.11729","date: 2023-10-14<br />meantemp: 11.99000","date: 2023-10-15<br />meantemp: 12.04875","date: 2023-10-16<br />meantemp: 11.96104","date: 2023-10-17<br />meantemp: 11.47167","date: 2023-10-18<br />meantemp: 11.85292","date: 2023-10-19<br />meantemp: 11.47604","date: 2023-10-20<br />meantemp: 14.61739"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.228310502283104,"r":7.3059360730593621,"b":40.182648401826491,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19506.150000000001,19656.849999999999],"tickmode":"array","ticktext":["Jun","Jul","Aug","Sep","Oct"],"tickvals":[19509,19539,19570,19601,19631],"categoryorder":"array","categoryarray":["Jun","Jul","Aug","Sep","Oct"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[11.126635416666668,18.717322916666667],"tickmode":"array","ticktext":["13","15","17"],"tickvals":[13,15,17],"categoryorder":"array","categoryarray":["13","15","17"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Temperature (°C)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"7cac6f0b7cb7":{"x":{},"y":{},"type":"scatter"}},"cur_data":"7cac6f0b7cb7","visdat":{"7cac6f0b7cb7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="disolved-oxygen-data" class="level2">
+<h2 class="anchored" data-anchor-id="disolved-oxygen-data">Disolved oxygen data</h2>
+<p>Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-85b13048ece8315b4158" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-85b13048ece8315b4158">{"x":{"data":[{"x":[19513,19514,19515,19516,19517,19518,19519,19520,19521,19522,19523,19524,19525,19526,19527,19528,19529,19530,19531,19532,19533,19534,19535,19536,19537,19538,19539,19540,19541,19542,19543,19544,19545,19546,19547,19548,19549,19550,19551,19552,19553,19554,19555,19556,19557,19558,19559,19560,19561,19562,19563,19564,19565,19566,19567,19568,19569,19570,19571,19572,19573,19574,19575,19576,19577,19578,19579,19580,19581,19582,19583,19584,19585,19586,19587,19588,19589,19590,19591,19592,19593,19594,19595,19596,19597,19598,19599,19600,19601,19602,19603,19604,19605,19606,19607,19608,19609,19610,19611,19612,19613,19614,19615,19616,19617,19618,19619,19620,19621,19622,19623,19624,19625,19626,19627,19628,19629,19630,19631,19632,19633,19634,19635,19636,19637,19638,19639,19640,19641,19642,19643,19644,19645,19646,19647,19648,19649,19650],"y":[11.847631578947368,9.7490625000000009,9.8755208333333329,11.366875,10.254687499999999,10.558645833333333,13.478645833333333,13.449479166666666,12.728125,12.003854166666667,12.315729166666667,11.752291666666666,10.3578125,10.217499999999999,9.8226041666666664,10.45875,10.819479166666667,11.092812500000001,11.770416666666666,13.4509375,12.907916666666667,14.076041666666667,13.530833333333334,11.415729166666667,12.172812499999999,12.400729166666666,10.926354166666666,10.792187500000001,10.509062500000001,9.1203125000000007,9.9660416666666674,10.332812499999999,10.398645833333333,11.193125,11.803020833333333,12.835625,12.251875,11.576145833333333,11.7209375,11.994270833333333,11.714270833333334,10.8265625,9.5620833333333337,10.757604166666667,10.137395833333333,10.6696875,10.992604166666666,9.7543749999999996,11.96625,11.734479166666667,9.5509374999999999,10.4728125,11.403645833333334,11.880625,11.596354166666666,10.153854166666667,9.2758333333333329,8.719479166666666,8.5245695364238419,9.3864583333333336,9.7178125000000009,9.2804166666666674,9.9412500000000001,9.4766666666666666,10.4946875,9.2564583333333328,10.313124999999999,9.8068749999999998,9.7212499999999995,9.7820833333333326,9.4869791666666661,9.3994791666666675,9.4642708333333339,9.5164583333333326,9.1151041666666668,10.233854166666667,10.258125,10.039791666666666,9.983645833333334,9.6445833333333333,10.5565625,9.7867708333333336,10.354583333333334,9.8424999999999994,8.9941666666666666,8.6445833333333333,8.1392708333333328,8.2329166666666662,8.3246874999999996,8.5497916666666658,7.582604166666667,9.3227083333333329,9.7876041666666662,9.2489583333333325,8.7123958333333338,8.9163541666666664,9.6602083333333333,8.9927083333333329,8.4540624999999991,8.344479166666666,9.1457291666666674,9.3385416666666661,9.1010416666666671,9.1571874999999991,8.4452083333333334,8.2340625000000003,9.2058333333333326,9.0062499999999996,9.6128125000000004,8.9965624999999996,7.9021875000000001,7.9371875000000003,7.5566666666666666,7.9500000000000002,7.7638541666666665,8.0457291666666659,8.2106250000000003,8.3914583333333326,8.5218749999999996,7.3708333333333336,9.4623958333333338,9.1494791666666657,7.8435416666666669,9.1521875000000001,7.1390624999999996,8.3097916666666674,8.9039583333333336,7.6349999999999998,7.4358333333333331,8.5276041666666664,8.2293749999999992,8.3168749999999996,7.7602083333333329,7.9328124999999998,8.2154166666666661,8.0409375000000001,5.3658333333333337,3.1739130434782608],"text":["date: 2023-06-05<br />meanDO: 11.847632","date: 2023-06-06<br />meanDO:  9.749063","date: 2023-06-07<br />meanDO:  9.875521","date: 2023-06-08<br />meanDO: 11.366875","date: 2023-06-09<br />meanDO: 10.254687","date: 2023-06-10<br />meanDO: 10.558646","date: 2023-06-11<br />meanDO: 13.478646","date: 2023-06-12<br />meanDO: 13.449479","date: 2023-06-13<br />meanDO: 12.728125","date: 2023-06-14<br />meanDO: 12.003854","date: 2023-06-15<br />meanDO: 12.315729","date: 2023-06-16<br />meanDO: 11.752292","date: 2023-06-17<br />meanDO: 10.357812","date: 2023-06-18<br />meanDO: 10.217500","date: 2023-06-19<br />meanDO:  9.822604","date: 2023-06-20<br />meanDO: 10.458750","date: 2023-06-21<br />meanDO: 10.819479","date: 2023-06-22<br />meanDO: 11.092813","date: 2023-06-23<br />meanDO: 11.770417","date: 2023-06-24<br />meanDO: 13.450938","date: 2023-06-25<br />meanDO: 12.907917","date: 2023-06-26<br />meanDO: 14.076042","date: 2023-06-27<br />meanDO: 13.530833","date: 2023-06-28<br />meanDO: 11.415729","date: 2023-06-29<br />meanDO: 12.172812","date: 2023-06-30<br />meanDO: 12.400729","date: 2023-07-01<br />meanDO: 10.926354","date: 2023-07-02<br />meanDO: 10.792188","date: 2023-07-03<br />meanDO: 10.509063","date: 2023-07-04<br />meanDO:  9.120313","date: 2023-07-05<br />meanDO:  9.966042","date: 2023-07-06<br />meanDO: 10.332812","date: 2023-07-07<br />meanDO: 10.398646","date: 2023-07-08<br />meanDO: 11.193125","date: 2023-07-09<br />meanDO: 11.803021","date: 2023-07-10<br />meanDO: 12.835625","date: 2023-07-11<br />meanDO: 12.251875","date: 2023-07-12<br />meanDO: 11.576146","date: 2023-07-13<br />meanDO: 11.720937","date: 2023-07-14<br />meanDO: 11.994271","date: 2023-07-15<br />meanDO: 11.714271","date: 2023-07-16<br />meanDO: 10.826562","date: 2023-07-17<br />meanDO:  9.562083","date: 2023-07-18<br />meanDO: 10.757604","date: 2023-07-19<br />meanDO: 10.137396","date: 2023-07-20<br />meanDO: 10.669688","date: 2023-07-21<br />meanDO: 10.992604","date: 2023-07-22<br />meanDO:  9.754375","date: 2023-07-23<br />meanDO: 11.966250","date: 2023-07-24<br />meanDO: 11.734479","date: 2023-07-25<br />meanDO:  9.550937","date: 2023-07-26<br />meanDO: 10.472812","date: 2023-07-27<br />meanDO: 11.403646","date: 2023-07-28<br />meanDO: 11.880625","date: 2023-07-29<br />meanDO: 11.596354","date: 2023-07-30<br />meanDO: 10.153854","date: 2023-07-31<br />meanDO:  9.275833","date: 2023-08-01<br />meanDO:  8.719479","date: 2023-08-02<br />meanDO:  8.524570","date: 2023-08-03<br />meanDO:  9.386458","date: 2023-08-04<br />meanDO:  9.717813","date: 2023-08-05<br />meanDO:  9.280417","date: 2023-08-06<br />meanDO:  9.941250","date: 2023-08-07<br />meanDO:  9.476667","date: 2023-08-08<br />meanDO: 10.494687","date: 2023-08-09<br />meanDO:  9.256458","date: 2023-08-10<br />meanDO: 10.313125","date: 2023-08-11<br />meanDO:  9.806875","date: 2023-08-12<br />meanDO:  9.721250","date: 2023-08-13<br />meanDO:  9.782083","date: 2023-08-14<br />meanDO:  9.486979","date: 2023-08-15<br />meanDO:  9.399479","date: 2023-08-16<br />meanDO:  9.464271","date: 2023-08-17<br />meanDO:  9.516458","date: 2023-08-18<br />meanDO:  9.115104","date: 2023-08-19<br />meanDO: 10.233854","date: 2023-08-20<br />meanDO: 10.258125","date: 2023-08-21<br />meanDO: 10.039792","date: 2023-08-22<br />meanDO:  9.983646","date: 2023-08-23<br />meanDO:  9.644583","date: 2023-08-24<br />meanDO: 10.556563","date: 2023-08-25<br />meanDO:  9.786771","date: 2023-08-26<br />meanDO: 10.354583","date: 2023-08-27<br />meanDO:  9.842500","date: 2023-08-28<br />meanDO:  8.994167","date: 2023-08-29<br />meanDO:  8.644583","date: 2023-08-30<br />meanDO:  8.139271","date: 2023-08-31<br />meanDO:  8.232917","date: 2023-09-01<br />meanDO:  8.324687","date: 2023-09-02<br />meanDO:  8.549792","date: 2023-09-03<br />meanDO:  7.582604","date: 2023-09-04<br />meanDO:  9.322708","date: 2023-09-05<br />meanDO:  9.787604","date: 2023-09-06<br />meanDO:  9.248958","date: 2023-09-07<br />meanDO:  8.712396","date: 2023-09-08<br />meanDO:  8.916354","date: 2023-09-09<br />meanDO:  9.660208","date: 2023-09-10<br />meanDO:  8.992708","date: 2023-09-11<br />meanDO:  8.454062","date: 2023-09-12<br />meanDO:  8.344479","date: 2023-09-13<br />meanDO:  9.145729","date: 2023-09-14<br />meanDO:  9.338542","date: 2023-09-15<br />meanDO:  9.101042","date: 2023-09-16<br />meanDO:  9.157187","date: 2023-09-17<br />meanDO:  8.445208","date: 2023-09-18<br />meanDO:  8.234063","date: 2023-09-19<br />meanDO:  9.205833","date: 2023-09-20<br />meanDO:  9.006250","date: 2023-09-21<br />meanDO:  9.612813","date: 2023-09-22<br />meanDO:  8.996562","date: 2023-09-23<br />meanDO:  7.902188","date: 2023-09-24<br />meanDO:  7.937188","date: 2023-09-25<br />meanDO:  7.556667","date: 2023-09-26<br />meanDO:  7.950000","date: 2023-09-27<br />meanDO:  7.763854","date: 2023-09-28<br />meanDO:  8.045729","date: 2023-09-29<br />meanDO:  8.210625","date: 2023-09-30<br />meanDO:  8.391458","date: 2023-10-01<br />meanDO:  8.521875","date: 2023-10-02<br />meanDO:  7.370833","date: 2023-10-03<br />meanDO:  9.462396","date: 2023-10-04<br />meanDO:  9.149479","date: 2023-10-05<br />meanDO:  7.843542","date: 2023-10-06<br />meanDO:  9.152188","date: 2023-10-07<br />meanDO:  7.139062","date: 2023-10-08<br />meanDO:  8.309792","date: 2023-10-09<br />meanDO:  8.903958","date: 2023-10-10<br />meanDO:  7.635000","date: 2023-10-11<br />meanDO:  7.435833","date: 2023-10-12<br />meanDO:  8.527604","date: 2023-10-13<br />meanDO:  8.229375","date: 2023-10-14<br />meanDO:  8.316875","date: 2023-10-15<br />meanDO:  7.760208","date: 2023-10-16<br />meanDO:  7.932812","date: 2023-10-17<br />meanDO:  8.215417","date: 2023-10-18<br />meanDO:  8.040938","date: 2023-10-19<br />meanDO:  5.365833","date: 2023-10-20<br />meanDO:  3.173913"],"type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.228310502283104,"r":7.3059360730593621,"b":40.182648401826491,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[19506.150000000001,19656.849999999999],"tickmode":"array","ticktext":["Jun","Jul","Aug","Sep","Oct"],"tickvals":[19509,19539,19570,19601,19631],"categoryorder":"array","categoryarray":["Jun","Jul","Aug","Sep","Oct"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2.6288066123188405,14.621148097826087],"tickmode":"array","ticktext":["3","6","9","12"],"tickvals":[3,6,9.0000000000000018,12],"categoryorder":"array","categoryarray":["3","6","9","12"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Disolved oxygen (mg/L)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"7cac1a951c1e":{"x":{},"y":{},"type":"scatter"}},"cur_data":"7cac1a951c1e","visdat":{"7cac1a951c1e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
