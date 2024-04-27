@@ -45,7 +45,7 @@ hoodav <- hooddat %>%
 
 ## Temperature data
 
-Temperature data was collected from hobo DO and temp logger.  Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. <Br>
+Temperature data was collected from hobo DO and temp logger.  Data was collected every 15 minutes and daily averages were calculated.<Br>
 
 The hobo logger was lost from this stite between August and October.
 
