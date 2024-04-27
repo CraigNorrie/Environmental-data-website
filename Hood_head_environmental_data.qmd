@@ -1,0 +1,80 @@
+---
+title: "Hood Head environmental data"
+---
+
+Background info about this. 
+
+
+```{r, include=FALSE}
+#Load the packages required to make a local scale map
+library(tidyverse)
+library(leaflet)#package to make interactive web
+library(leaflet.providers)#allows you to add third party basemaps
+library(here)
+library(plotly)
+library(lubridate)
+```
+
+## Site information
+
+```{r, echo=FALSE, results='hide'}
+aquaculturemap_hood <- leaflet() %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) %>%
+  addMarkers(lng = -122.612914,lat = 47.884253, popup = "Hood Head - Blue Dot Sea Farm") #Hood Head
+```
+
+```{r, echo=FALSE}
+aquaculturemap_hood
+```
+
+<Br>Here will be a link to the raw data<Br>
+
+```{r, echo=FALSE, results='hide'}
+#Sumarise the data
+#turn this into a loop that will do this for each of the cvs files that I have in the data folder
+hooddat <- read.csv(here("Data", "hood_Do_Temp.csv"))#Read in the data
+hooddat$datetime <- mdy_hm(hooddat$Date.Time..GMT.07.00)
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+hoodav <- hooddat %>%
+  mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
+  group_by(date) %>%
+  summarise(meantemp = mean(Temp_C, na.rm = TRUE),
+            meanDO = mean(DO_mgL, na.rm = TRUE))
+```
+
+
+## Temperature data
+
+Temperature data was collected from hobo DO and temp logger.  Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. <Br>
+
+The hobo logger was lost from this stite between August and October.
+
+```{r, echo=FALSE, results='hide'}
+hood_temp_plot <- hoodav %>% 
+  ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+
+```
+
+```{r, echo = FALSE}
+ggplotly(hood_temp_plot)
+```
+
+## Disolved oxygen data
+
+Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water
+
+```{r, echo=FALSE, results='hide'}
+hood_do_plot <- hoodav %>% 
+  ggplot(aes(x = date, y = meanDO))+geom_line()+xlab("Date")+ylab("Disolved oxygen (mg/L)")+theme_bw()
+
+ggplotly(hood_do_plot)
+
+```
+
+```{r, echo = FALSE}
+ggplotly(hood_do_plot)
+```
+
+
+
+

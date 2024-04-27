@@ -1,0 +1,54 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include=FALSE}
+#Load the packages required for this 
+library(tidyverse)
+library(leaflet)#package to make interactive web
+library(leaflet.providers)#allows you to add third party basemaps
+```
+
+# Environmental data from aquaculture
+
+Data collected from aquaculture locations throughout Washington
+
+## Map of sites
+
+Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.
+
+```{r, echo = FALSE, results = "hide"}
+###Create the map
+#Set the content for each point on the map
+content_thorndyke <- paste("<b>Thorndyke Bay, Baywater Shellfish - UW</b><br/>
+                           Data: Disolved oxygen, temperature, salinity<br/>
+                           Contact: Craig Norrie")
+
+content_manchester <- paste("<b>Clam Bay, NOAA Manchester - UW</b><br/>
+                           Data: Disolved oxygen, temperature, salinity, pH<br/>
+                           Contact: Craig Norrie")
+
+content_Hood <- paste("<b>Hood Head, Blue Dot Sea Farm - UW</b><br/>
+                           Data: Disolved oxygen, temperature, salinity, pH</b><br/>
+                           Contact: Craig Norrie")
+
+content_Southsound <- paste("<b>South Sound, Chelsea Farms - UW</b><br/>
+                           Data: Disolved oxygen, temperature, salinity<br/>
+                           Contact: Craig Norrie")
+#Create the map - in the future set all of the variables in a csv to be read in 
+aquaculturemap <- leaflet() %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) %>% 
+  addMarkers(lng = -122.738067,lat = 47.808739, popup = content_thorndyke) %>% #Thorndyke Bay
+  addMarkers(lng = -122.960441,lat = 47.127609, popup = content_Southsound) %>% #Chelsea
+  addMarkers(lng = -122.545044,lat = 47.573528, popup = content_manchester) %>% #Manchester
+  addMarkers(lng = -122.612914,lat = 47.884253, popup = content_Hood) #Hood Head
+```
+
+```{r, echo = FALSE}
+aquaculturemap
+```
+
+
+I will add plots that show all the data from each site on the same plots. 

@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Environmental data from aquaculture",
+    "section": "",
+    "text": "Data collected from aquaculture locations throughout Washington\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\nI will add plots that show all the data from each site on the same plots."
+  },
+  {
+    "objectID": "index.html#map-of-sites",
+    "href": "index.html#map-of-sites",
+    "title": "Environmental data from aquaculture",
+    "section": "",
+    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\nI will add plots that show all the data from each site on the same plots."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Thorndyke_environmental_data.html",
+    "href": "Thorndyke_environmental_data.html",
+    "title": "Thorndyke Bay environmental data",
+    "section": "",
+    "text": "Data is going to be shown here"
+  },
+  {
+    "objectID": "Thorndyke_environmental_data.html#university-of-washington-collected-data",
+    "href": "Thorndyke_environmental_data.html#university-of-washington-collected-data",
+    "title": "Thorndyke Bay environmental data",
+    "section": "University of Washington collected data",
+    "text": "University of Washington collected data\nLink to raw data"
+  },
+  {
+    "objectID": "Thorndyke_environmental_data.html#temperature-data",
+    "href": "Thorndyke_environmental_data.html#temperature-data",
+    "title": "Thorndyke Bay environmental data",
+    "section": "Temperature data",
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nWe can include additional lines with differtent colours for each of the locations within thorndyke to compare."
+  },
+  {
+    "objectID": "Thorndyke_environmental_data.html#disolved-oxygen-data---uw",
+    "href": "Thorndyke_environmental_data.html#disolved-oxygen-data---uw",
+    "title": "Thorndyke Bay environmental data",
+    "section": "Disolved oxygen data - UW",
+    "text": "Disolved oxygen data - UW\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water"
+  },
+  {
+    "objectID": "Hood_head_environmental_data.html",
+    "href": "Hood_head_environmental_data.html",
+    "title": "Hood Head environmental data",
+    "section": "",
+    "text": "Background info about this."
+  },
+  {
+    "objectID": "Hood_head_environmental_data.html#temperature-data",
+    "href": "Hood_head_environmental_data.html#temperature-data",
+    "title": "Hood Head environmental data",
+    "section": "Temperature data",
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nThe hobo logger was lost from this stite between August and October."
+  },
+  {
+    "objectID": "Hood_head_environmental_data.html#disolved-oxygen-data",
+    "href": "Hood_head_environmental_data.html#disolved-oxygen-data",
+    "title": "Hood Head environmental data",
+    "section": "Disolved oxygen data",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water"
+  },
+  {
+    "objectID": "Hood_head_environmental_data.html#site-information",
+    "href": "Hood_head_environmental_data.html#site-information",
+    "title": "Hood Head environmental data",
+    "section": "Site information",
+    "text": "Site information\n\n\n\n\n\n\nHere will be a link to the raw data"
+  },
+  {
+    "objectID": "Thorndyke_environmental_data.html#disolved-oxygen-data",
+    "href": "Thorndyke_environmental_data.html#disolved-oxygen-data",
+    "title": "Thorndyke Bay environmental data",
+    "section": "Disolved oxygen data",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water"
+  },
+  {
+    "objectID": "Chelsea_environmental_data.html",
+    "href": "Chelsea_environmental_data.html",
+    "title": "Chelsea environmental data",
+    "section": "",
+    "text": "Background info about this."
+  },
+  {
+    "objectID": "Chelsea_environmental_data.html#site-information",
+    "href": "Chelsea_environmental_data.html#site-information",
+    "title": "Chelsea environmental data",
+    "section": "Site information",
+    "text": "Site information\n\n\n\n\n\n\nHere will be a link to the raw data"
+  },
+  {
+    "objectID": "Chelsea_environmental_data.html#temperature-data",
+    "href": "Chelsea_environmental_data.html#temperature-data",
+    "title": "Chelsea environmental data",
+    "section": "Temperature data",
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nThe hobo logger was lost from this stite between August and October."
+  },
+  {
+    "objectID": "Chelsea_environmental_data.html#disolved-oxygen-data",
+    "href": "Chelsea_environmental_data.html#disolved-oxygen-data",
+    "title": "Chelsea environmental data",
+    "section": "Disolved oxygen data",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water"
+  },
+  {
+    "objectID": "Manchester_environmental_data.html",
+    "href": "Manchester_environmental_data.html",
+    "title": "Manchester environmental data",
+    "section": "",
+    "text": "Background info about this."
+  },
+  {
+    "objectID": "Manchester_environmental_data.html#site-information",
+    "href": "Manchester_environmental_data.html#site-information",
+    "title": "Manchester environmental data",
+    "section": "Site information",
+    "text": "Site information\n\n\n\n\n\n\nHere will be a link to the raw data"
+  },
+  {
+    "objectID": "Manchester_environmental_data.html#temperature-data",
+    "href": "Manchester_environmental_data.html#temperature-data",
+    "title": "Manchester environmental data",
+    "section": "Temperature data",
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nThe hobo logger was lost from this stite between August and October."
+  },
+  {
+    "objectID": "Manchester_environmental_data.html#disolved-oxygen-data",
+    "href": "Manchester_environmental_data.html#disolved-oxygen-data",
+    "title": "Manchester environmental data",
+    "section": "Disolved oxygen data",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water"
+  }
+]

@@ -1,0 +1,7 @@
+"0","#Load the packages required to make a local scale map"
+"0","library(tidyverse)"
+"0","library(leaflet)#package to make interactive web"
+"0","library(leaflet.providers)#allows you to add third party basemaps"
+"0","library(here)"
+"0","library(plotly)"
+"0","library(lubridate)"

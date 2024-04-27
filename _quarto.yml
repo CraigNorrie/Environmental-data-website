@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "Environmental data from auquaculture" 
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Basics"
+        contents:
+          - index.qmd
+      - section: "Data"
+        contents:
+          - Thorndyke_environmental_data.qmd
+          - Hood_head_environmental_data.qmd
+          - Chelsea_environmental_data.qmd
+          - Manchester_environmental_data.qmd
