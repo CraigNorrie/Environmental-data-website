@@ -3,15 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Environmental data from auquaculture" 
+  title: "Environmental data from aquaculture" 
   sidebar:
     style: "docked"
     search: true
     contents:
-      - section: "Basics"
+      - section: "Data overview"
         contents:
           - index.qmd
-      - section: "Data"
+      - section: "Individual site details"
         contents:
           - Thorndyke_environmental_data.qmd
           - Hood_head_environmental_data.qmd

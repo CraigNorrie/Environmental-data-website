@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Data collected from aquaculture locations throughout Washington\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\nI will add plots that show all the data from each site on the same plots."
+    "text": "Data collected from aquaculture locations throughout Washington.\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners."
   },
   {
     "objectID": "index.html#map-of-sites",
     "href": "index.html#map-of-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\nI will add plots that show all the data from each site on the same plots."
+    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data."
   },
   {
     "objectID": "Thorndyke_environmental_data.html",
@@ -117,5 +117,12 @@
     "title": "Manchester environmental data",
     "section": "Disolved oxygen data",
     "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated."
+  },
+  {
+    "objectID": "index.html#comparison-of-data-across-sites",
+    "href": "index.html#comparison-of-data-across-sites",
+    "title": "Environmental data from aquaculture",
+    "section": "",
+    "text": "Note that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners."
   }
 ]

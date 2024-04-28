@@ -9,11 +9,14 @@ editor_options:
 library(tidyverse)
 library(leaflet)#package to make interactive web
 library(leaflet.providers)#allows you to add third party basemaps
+library(here)
+library(plotly)
+library(lubridate)
 ```
 
 # Environmental data from aquaculture
 
-Data collected from aquaculture locations throughout Washington
+Data collected from aquaculture locations throughout Washington. 
 
 ## Map of sites
 
@@ -50,5 +53,91 @@ aquaculturemap <- leaflet() %>%
 aquaculturemap
 ```
 
+## Comparison of data across sites
 
-I will add plots that show all the data from each site on the same plots. 
+### Disolved oxygen
+
+```{r, include=FALSE}
+#Create averages
+##read in the data 
+allthorndat <- read.csv(here("Data","thorn_Do_Temp.csv"))
+allcheldat <- read.csv(here("Data","chelsea_Do_Temp.csv"))
+allhooddat <- read.csv(here("Data","hood_Do_Temp.csv"))
+allmandat <- read.csv(here("Data","man_Do_Temp.csv"))
+
+
+#Set the first column as date
+allthorndat$datetime <- mdy_hm(allthorndat$Date.Time..GMT.07.00)
+allcheldat$datetime  <- mdy_hm(allcheldat$Date.Time..GMT.07.00)
+allhooddat$datetime  <- mdy_hm(allhooddat$Date.Time..GMT.07.00)
+allmandat$datetime  <- mdy_hm(allmandat$Date.Time..GMT.07.00)
+#add a site columin to each of the DFs
+allcheldat <- allcheldat %>% mutate(Site = "Chelsea")
+allthorndat <- allthorndat %>% mutate(Site = "Thorndyke")
+allhooddat <- allhooddat %>% mutate(Site = "Hood_Head")
+allmandat <- allmandat %>% mutate(Site = "Manchester")
+#add a date column to the two dfs
+allcheldat$date <- as.Date(allcheldat$datetime)
+allthorndat$date <- as.Date(allthorndat$datetime)
+allhooddat$date <- as.Date(allhooddat$datetime)
+allmandat$date <- as.Date(allmandat$datetime)
+#calculate averages
+chelav <- allcheldat %>% group_by(date) %>% summarise(meantemp=mean(Temp_C, na.rm = TRUE), meanDO=mean(DO_mgL, na.rm = TRUE))
+thornav <- allthorndat %>% group_by(date) %>% summarise(meantemp=mean(Temp_C, na.rm = TRUE), meanDO=mean(DO_mgL, na.rm = TRUE))
+manav <- allmandat %>% group_by(date) %>% summarise(meantemp=mean(Temp_C, na.rm = TRUE), meanDO=mean(DO_mgL, na.rm = TRUE))
+hoodav <- allhooddat %>% group_by(date) %>% summarise(meantemp=mean(Temp_C, na.rm = TRUE), meanDO=mean(DO_mgL, na.rm = TRUE))
+#Only caclulate the days I want
+chelav <- chelav %>% filter(date > "2023-06-05")
+thornav <- thornav %>% filter(date > "2023-06-05")
+hoodav <- hoodav %>% filter(date > "2023-06-05")
+manav <- manav %>% filter(date > "2023-06-05")
+#calculate cumulative degree days
+chelav$degdays <- cumsum(chelav$meantemp)
+thornav$degdays <- cumsum(thornav$meantemp)
+#Add site to the average dfs
+chelav <- chelav %>% mutate(Site = "Chelsea")
+thornav <- thornav %>% mutate(Site = "Thorndyke")
+manlav <- manav %>% mutate(Site = "Manchester")
+hoodav <- hoodav %>% mutate(Site = "Hood_Head")
+#merge the two sites temperature data to plot
+alldat <- bind_rows(allcheldat, allthorndat, allmandat, allhooddat)
+allavdat <- bind_rows(chelav, thornav, hoodav, manav)
+dailyaverages <- alldat
+alldat$date <- as.Date(alldat$datetime) 
+averagetemps <- alldat %>% group_by(date, Site) %>% summarise(meantemp=mean(Temp_C, na.rm = TRUE))
+averageDO <- alldat %>% group_by(date, Site) %>% summarise(meanDO=mean(DO_mgL, na.rm = TRUE))
+
+#Plot DO
+avergage_DO_plot <- averageDO %>% 
+  filter(date > "2023-06-05") %>% filter(date < "2023-10-17") %>% 
+  ggplot(aes(x= date , y = meanDO, colour = Site)) + geom_line()+
+  theme_bw()+ylab("Daily Mean Dissolved Oxygen (mg / L)")+xlab("Date")+
+  scale_color_manual(values=c("#B3C863","#756A8C","#037D64","#CEB08E"))+
+  theme(axis.title.y=element_text())+
+  theme(
+    text = element_text(size = 14))
+
+```
+
+```{r, echo=FALSE}
+ggplotly(avergage_DO_plot)
+```
+
+### Temperature
+Note that these daily averages include time that individuals were out of the water at low tide sites.
+
+```{r, include = FALSE}
+averagetemps <- averagetemps %>% 
+  filter(date > "2023-06-05") %>% filter(date < "2023-10-17") %>% 
+           ggplot(aes(x= date , y = meantemp, colour = Site)) + geom_line(size=1)+
+  theme_bw()+ylab("Daily Mean Temperature (°C)")+xlab("Date")+
+  scale_color_manual(values=c("#B3C863","#756A8C","#037D64","#CEB08E"))+
+  theme(text=element_text(),
+        axis.title.y=element_text())
+```
+
+```{r, echo=FALSE}
+ggplotly(averagetemps)
+```
+
+Github page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners. 

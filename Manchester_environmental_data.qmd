@@ -5,7 +5,7 @@ editor: source
 ---
 
 
-Background info about this. 
+Data hosted in this repository has been collected as part of ongoing research at aquaculture locations throughout Washington State. 
 
 
 ```{r, include=FALSE}
@@ -75,6 +75,7 @@ ggplotly(man_do_plot)
 ```{r, echo = FALSE}
 ggplotly(man_do_plot)
 ```
+
 
 
 
