@@ -16,7 +16,7 @@ library(lubridate)
 
 # Environmental data from aquaculture
 
-Data collected from aquaculture locations throughout Washington. 
+Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Contact the providers of the data for more information. 
 
 ## Map of sites
 
