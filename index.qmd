@@ -16,7 +16,7 @@ library(htmltools)
 
 # Environmental data from aquaculture
 
-Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Contact the providers of the data for more information. 
+Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Demonstration website.
 
 ## Map of sites
 
@@ -130,4 +130,4 @@ averagetemps <- averagetemps %>%
 ggplotly(averagetemps)
 ```
 
-Github page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners. 
+Github page created by Craig Norrie. Last updated 4 May 2024. This could be a location to have data hosted from multiple projects. 

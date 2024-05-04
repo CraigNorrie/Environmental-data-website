@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Contact the providers of the data for more information.\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners.",
+    "text": "Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Demonstration website.\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. Can easily add more sites by adding rows to a CSV file.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 4 May 2024. This could be a location to have data hosted from multiple projects.",
     "crumbs": [
       "Data overview",
       "Environmental data from aquaculture"
@@ -15,7 +15,7 @@
     "href": "index.html#map-of-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.",
+    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. Can easily add more sites by adding rows to a CSV file.",
     "crumbs": [
       "Data overview",
       "Environmental data from aquaculture"
@@ -26,21 +26,33 @@
     "href": "Thorndyke_environmental_data.html",
     "title": "Thorndyke Bay environmental data",
     "section": "",
-    "text": "Data is going to be shown here"
+    "text": "Data is going to be shown here",
+    "crumbs": [
+      "Individual site details",
+      "Thorndyke Bay environmental data"
+    ]
   },
   {
     "objectID": "Thorndyke_environmental_data.html#temperature-data",
     "href": "Thorndyke_environmental_data.html#temperature-data",
     "title": "Thorndyke Bay environmental data",
     "section": "Temperature data",
-    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nWe can include additional lines with differtent colours for each of the locations within thorndyke to compare."
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nWe can include additional lines with differtent colours for each of the locations within thorndyke to compare.",
+    "crumbs": [
+      "Individual site details",
+      "Thorndyke Bay environmental data"
+    ]
   },
   {
     "objectID": "Thorndyke_environmental_data.html#disolved-oxygen-data",
     "href": "Thorndyke_environmental_data.html#disolved-oxygen-data",
     "title": "Thorndyke Bay environmental data",
     "section": "Disolved oxygen data",
-    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water"
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water",
+    "crumbs": [
+      "Individual site details",
+      "Thorndyke Bay environmental data"
+    ]
   },
   {
     "objectID": "Hood_head_environmental_data.html",
@@ -131,7 +143,7 @@
     "href": "index.html#comparison-of-data-across-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Note that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners.",
+    "text": "Note that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 4 May 2024. This could be a location to have data hosted from multiple projects.",
     "crumbs": [
       "Data overview",
       "Environmental data from aquaculture"
