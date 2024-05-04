@@ -4,14 +4,22 @@
     "href": "index.html",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Data collected from aquaculture locations throughout Washington.\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners."
+    "text": "Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Contact the providers of the data for more information.\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners.",
+    "crumbs": [
+      "Data overview",
+      "Environmental data from aquaculture"
+    ]
   },
   {
     "objectID": "index.html#map-of-sites",
     "href": "index.html#map-of-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data."
+    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.",
+    "crumbs": [
+      "Data overview",
+      "Environmental data from aquaculture"
+    ]
   },
   {
     "objectID": "Thorndyke_environmental_data.html",
@@ -123,6 +131,10 @@
     "href": "index.html#comparison-of-data-across-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Note that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners."
+    "text": "Note that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 27th April 2024. This would be an excellent location to have data hosted from multiple partners.",
+    "crumbs": [
+      "Data overview",
+      "Environmental data from aquaculture"
+    ]
   }
 ]

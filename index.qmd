@@ -11,7 +11,7 @@ library(leaflet)#package to make interactive web
 library(leaflet.providers)#allows you to add third party basemaps
 library(here)
 library(plotly)
-library(lubridate)
+library(htmltools)
 ```
 
 # Environmental data from aquaculture
@@ -20,33 +20,23 @@ Data collected from aquaculture locations throughout Washington. Data displayed 
 
 ## Map of sites
 
-Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.
+Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. Can easily add more sites by adding rows to a CSV file.
 
-```{r, echo = FALSE, results = "hide"}
+```{r, echo = FALSE, results = "hide", include=FALSE}
 ###Create the map
-#Set the content for each point on the map
-content_thorndyke <- paste("<b>Thorndyke Bay, Baywater Shellfish - UW</b><br/>
-                           Data: Disolved oxygen, temperature, salinity<br/>
-                           Contact: Craig Norrie")
-
-content_manchester <- paste("<b>Clam Bay, NOAA Manchester - UW</b><br/>
-                           Data: Disolved oxygen, temperature, salinity, pH<br/>
-                           Contact: Craig Norrie")
-
-content_Hood <- paste("<b>Hood Head, Blue Dot Sea Farm - UW</b><br/>
-                           Data: Disolved oxygen, temperature, salinity, pH</b><br/>
-                           Contact: Craig Norrie")
-
-content_Southsound <- paste("<b>South Sound, Chelsea Farms - UW</b><br/>
-                           Data: Disolved oxygen, temperature, salinity<br/>
-                           Contact: Craig Norrie")
+#Read in site info
+siteinfo <- read.csv(here("Site_info.csv"))
 #Create the map - in the future set all of the variables in a csv to be read in 
 aquaculturemap <- leaflet() %>% 
   addProviderTiles(providers$Esri.OceanBasemap) %>% 
-  addMarkers(lng = -122.738067,lat = 47.808739, popup = content_thorndyke) %>% #Thorndyke Bay
-  addMarkers(lng = -122.960441,lat = 47.127609, popup = content_Southsound) %>% #Chelsea
-  addMarkers(lng = -122.545044,lat = 47.573528, popup = content_manchester) %>% #Manchester
-  addMarkers(lng = -122.612914,lat = 47.884253, popup = content_Hood) #Hood Head
+  addMarkers(lng = siteinfo$Long, lat = siteinfo$Lat,
+             popup = lapply(seq(nrow(siteinfo)), function(i) {
+               HTML(paste0("<strong>", siteinfo$Site_name[i], "</strong><br>",
+                           "Availble data: ", siteinfo$Data[i], "<br>",
+                           "Organisation: ", siteinfo$Organisation[i], "<br>",
+                           "Contact: ", siteinfo$Contact[i]))
+             }))
+
 ```
 
 ```{r, echo = FALSE}
