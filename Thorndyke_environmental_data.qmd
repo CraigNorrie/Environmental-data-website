@@ -17,6 +17,8 @@ library(lubridate)
 ```
 
 # Site information
+Sensors at Thorndyke Bay are deployed on a commercial shellfish farm. The sensors are located in an intertidal area at a tidal height of approximatley x cm. 
+
 ```{r, echo = FALSE, results = "hide"}
 ###Create the map
 #Set the content for each point on the map
@@ -44,7 +46,7 @@ I will change the basemap here so you can zoom in more
 aquaculturemap_thorn
 ```
 
-<Br>Here will be a link to the raw data<Br>
+<Br>Raw data is availble [here](https://github.com/CraigNorrie/Environmental-data-website/tree/main/Data)<Br>
 
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
