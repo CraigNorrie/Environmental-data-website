@@ -65,7 +65,7 @@ Dissolved oxygen data was collected using a hobo DO and temp logger. Data was co
 
 ```{r, echo=FALSE, results='hide'}
 hood_do_plot <- hoodav %>% 
-  ggplot(aes(x = date, y = meanDO))+geom_line()+xlab("Date")+ylab("Disolved oxygen (mg/L)")+theme_bw()
+  ggplot(aes(x = date, y = meanDO))+geom_line()+xlab("Date")+ylab("Disolved oxygen (mg/L)")+theme_bw()#+geom_blank()
 
 ggplotly(hood_do_plot)
 
@@ -75,6 +75,6 @@ ggplotly(hood_do_plot)
 ggplotly(hood_do_plot)
 ```
 
-
+## Carbonate Chemistry
 
 
