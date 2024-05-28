@@ -2,8 +2,9 @@
 title: "Hood Head environmental data"
 ---
 
-Background info about this. 
-
+Hood Head site is located within [Blue Dot Sea Farm](https://bluedotseafarms.com/). Blue Dot Sea Farm is a subtidal shellfish and seaweed farm. Environmental monitoring instruments are deployed on hanging [SEAPA](https://seapausa.com/oyster-baskets/) oyster cages or suspended directly from backbone lines. 
+<Br>
+![Blue Dot Sea Farm, Hood Head, Washington](/Images/Hood Head.jpg)
 
 ```{r, include=FALSE}
 #Load the packages required to make a local scale map
@@ -15,7 +16,7 @@ library(plotly)
 library(lubridate)
 ```
 
-## Site information
+## Site Location
 
 ```{r, echo=FALSE, results='hide'}
 aquaculturemap_hood <- leaflet() %>% 
