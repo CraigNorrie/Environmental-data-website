@@ -2,7 +2,7 @@
 title: "Thorndyke Bay environmental data"
 ---
 
-Thorndyke Bay monitoring instruments are located within the [Baywater Shellfish](https://www.baywatershellfish.com/) shellfish farm. Baywater shellfish is an intertidal shellfish farm that.
+Thorndyke Bay monitoring instruments are located within the [Baywater Shellfish](https://www.baywatershellfish.com/) shellfish farm. Baywater shellfish is an intertidal shellfish farm. Environmental monitoring instruments are located on oyster lines that are anchored into the ground and are exposed every tidal cycle. 
 
 ![Thorndyke Bay, Hood Canal, Washington](/Images/Thorndyke Bay.jpg)
 

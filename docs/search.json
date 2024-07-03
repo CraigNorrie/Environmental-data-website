@@ -26,7 +26,7 @@
     "href": "Thorndyke_environmental_data.html",
     "title": "Thorndyke Bay environmental data",
     "section": "",
-    "text": "Thorndyke Bay monitoring instruments are located within the Baywater Shellfish shellfish farm. Baywater shellfish is an intertidal shellfish farm that.",
+    "text": "Thorndyke Bay monitoring instruments are located within the Baywater Shellfish shellfish farm. Baywater shellfish is an intertidal shellfish farm. Environmental monitoring instruments are located on oyster lines that are anchored into the ground and are exposed every tidal cycle.",
     "crumbs": [
       "Individual site details",
       "Thorndyke Bay environmental data"
@@ -59,7 +59,7 @@
     "href": "Hood_head_environmental_data.html",
     "title": "Hood Head environmental data",
     "section": "",
-    "text": "Hood Head site is located within Blue Dot Sea Farm. Blue Dot Sea Farm is a subtidal oyster and seaweed farm. Environmental monitoring instruments are deployed on hanging SEAPA oyster cages or suspended directly from backbone lines.",
+    "text": "Hood Head site is located within Blue Dot Sea Farm. Blue Dot Sea Farm is a subtidal shellfish and seaweed farm. Environmental monitoring instruments are deployed on hanging SEAPA oyster cages or suspended directly from backbone lines.",
     "crumbs": [
       "Individual site details",
       "Hood Head environmental data"
@@ -236,6 +236,17 @@
     "title": "Hood Head environmental data",
     "section": "Carbonate Chemistry",
     "text": "Carbonate Chemistry",
+    "crumbs": [
+      "Individual site details",
+      "Hood Head environmental data"
+    ]
+  },
+  {
+    "objectID": "Hood_head_environmental_data.html#site-location",
+    "href": "Hood_head_environmental_data.html#site-location",
+    "title": "Hood Head environmental data",
+    "section": "Site Location",
+    "text": "Site Location\n\n\n\n\n\n\nHere will be a link to the raw data",
     "crumbs": [
       "Individual site details",
       "Hood Head environmental data"
