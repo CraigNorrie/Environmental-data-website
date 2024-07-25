@@ -119,7 +119,7 @@ Note that these daily averages include time that individuals were out of the wat
 ```{r, include = FALSE}
 averagetemps <- averagetemps %>% 
   filter(date > "2023-06-05") %>% #filter(date < "2023-10-17") %>% 
-           ggplot(aes(x= date , y = meantemp, colour = Site)) + geom_line(size=1)+
+           ggplot(aes(x= date , y = meantemp, colour = Site)) + geom_line()+
   theme_bw()+ylab("Daily Mean Temperature (°C)")+xlab("Date")+
   scale_color_manual(values=c("#B3C863","#756A8C","#037D64","#CEB08E"))+
   theme(text=element_text(),

@@ -1,0 +1,93 @@
+---
+title: "Manchester environmental data"
+format: html
+editor: source
+---
+
+
+
+Data hosted in this repository has been collected as part of ongoing research at aquaculture locations throughout Washington State. 
+
+
+
+```{r, include=FALSE}
+#Load the packages required to make a local scale map
+library(tidyverse)
+library(leaflet)#package to make interactive web
+library(leaflet.providers)#allows you to add third party basemaps
+library(here)
+library(plotly)
+library(lubridate)
+```
+
+
+## Site information
+
+
+```{r, echo=FALSE, results='hide'}
+aquaculturemap_man <- leaflet() %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) %>%
+  addMarkers(lng = -122.545044,lat = 47.573528, popup = "Clam Bay - NOAA Manchester")
+```
+
+```{r, echo=FALSE}
+aquaculturemap_man
+```
+
+
+<Br>Here will be a link to the raw data<Br>
+
+
+```{r, echo=FALSE, results='hide'}
+#Sumarise the data
+#turn this into a loop that will do this for each of the cvs files that I have in the data folder
+mandat <- read.csv(here("Data", "man_Do_Temp.csv"))#Read in the data
+mandat$datetime <- mdy_hm(mandat$Date.Time..GMT.07.00)
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+manav <- mandat %>%
+  mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
+  group_by(date) %>%
+  summarise(meantemp = mean(Temp_C, na.rm = TRUE),
+            meanDO = mean(DO_mgL, na.rm = TRUE))
+```
+
+
+
+## Temperature data
+
+Temperature data was collected from hobo DO and temp logger.  Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. <Br>
+
+
+```{r, echo=FALSE, results='hide'}
+man_temp_plot <- manav %>% 
+  ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+
+```
+
+```{r, echo = FALSE}
+ggplotly(man_temp_plot)
+```
+
+
+## Disolved oxygen data
+
+Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. 
+
+
+```{r, echo=FALSE, results='hide'}
+man_do_plot <- manav %>% 
+  ggplot(aes(x = date, y = meanDO))+geom_line()+xlab("Date")+ylab("Disolved oxygen (mg/L)")+theme_bw()
+
+ggplotly(man_do_plot)
+
+```
+
+```{r, echo = FALSE}
+ggplotly(man_do_plot)
+```
+
+
+## Carbonate Chemistry
+
+
+
