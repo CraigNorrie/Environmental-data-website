@@ -62,7 +62,7 @@ ggplotly(hood_temp_plot)
 
 ## Disolved oxygen data
 
-Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water
+Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. 
 
 ```{r, echo=FALSE, results='hide'}
 hood_do_plot <- hoodav %>% 
@@ -76,9 +76,7 @@ ggplotly(hood_do_plot)
 ggplotly(hood_do_plot)
 ```
 
-## Carbonate Chemistry
 
-Samples were taken monthly and preserved with the addition of 200 µl of mercuric chloride. pH was determined spectrophotometrically using an ocean insights spectrophotometer. Total alkalinity was determind through volumetric titrations and the remainder of the carbonate system was paramaterised using [Seacarb in R](https://github.com/cran/seacarb).
 
 ```{r}
 carbchem %>% filter(Site == "Hood Head") %>% select(-c(1,2)) %>%  arrange(Year, Month)

@@ -16,7 +16,7 @@ library(htmltools)
 
 # Environmental data from aquaculture
 
-Environmental data displayed in this repository has been collected at aquaculture locations throughout the puget sound as part of an ongoing project. Data displayed here has not been quality controlled. Suggestions for additions or alterations to this page please contact Craig Norrie - [cnorrie@uw.edu](cnorrie@uw.edu)
+Environmental data displayed in this repository has been collected at aquaculture locations throughout Puget sound as part of an ongoing project. Data displayed here has not been quality controlled. Suggestions for additions or alterations to this page please contact Craig Norrie - [cnorrie@uw.edu](cnorrie@uw.edu)
 
 ## Map of sites
 
@@ -49,7 +49,7 @@ The following figures allow the comparison of data across all sites over the dur
 
 ### Disolved oxygen
 
-At intertidal sites, these daily averages include time that the sensors (and therefore animals) were not in the water. 
+At intertidal sites, these daily averages include time that the sensors were not in the water. 
 
 ```{r, include=FALSE}
 #Create averages

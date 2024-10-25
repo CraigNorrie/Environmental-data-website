@@ -5,7 +5,7 @@ editor: source
 ---
 
 
-This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 
+This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m
 
 ![Chelsea Farms, Eld Inlet,  Washington](/Images/Chelsea.jpg)
 
@@ -65,7 +65,7 @@ ggplotly(chel_temp_plot)
 
 ## Disolved oxygen data
 
-Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water
+Dissolved oxygen data was collected using a hobo DO and temperature logger. Data was collected every 15 minutes and daily averages were calculated. Note this data includes periods of tidal emersion. 
 
 ```{r, echo=FALSE, results='hide'}
 chel_do_plot <- chelav %>% 
@@ -78,11 +78,6 @@ ggplotly(chel_do_plot)
 ```{r, echo = FALSE}
 ggplotly(chel_do_plot)
 ```
-
-
-## Carbonate Chemistry
-
-Samples were taken monthly and preserved with the addition of 200 µl of mercuric chloride. pH was determined spectrophotometrically using an ocean insights spectrophotometer. Total alkalinity was determind through volumetric titrations and the remainder of the carbonate system was paramaterised using [Seacarb in R](https://github.com/cran/seacarb).
 
 ```{r}
 carbchem %>% filter(Site == "Chelsea") %>% select(-c(1,2)) %>%  arrange(Year, Month)
