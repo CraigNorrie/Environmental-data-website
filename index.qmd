@@ -16,11 +16,11 @@ library(htmltools)
 
 # Environmental data from aquaculture
 
-Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Demonstration website.
+Environmental data displayed in this repository has been collected at aquaculture locations throughout the puget sound as part of an ongoing project. Data displayed here has not been quality controlled. Suggestions for additions or alterations to this page please contact Craig Norrie - [cnorrie@uw.edu](cnorrie@uw.edu)
 
 ## Map of sites
 
-Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. Can easily add more sites by adding rows to a CSV file.
+Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. 
 
 ```{r, echo = FALSE, results = "hide", include=FALSE}
 ###Create the map
@@ -45,7 +45,11 @@ aquaculturemap
 
 ## Comparison of data across sites
 
+The following figures allow the comparison of data across all sites over the duration that the data was collected. 
+
 ### Disolved oxygen
+
+At intertidal sites, these daily averages include time that the sensors (and therefore animals) were not in the water. 
 
 ```{r, include=FALSE}
 #Create averages
@@ -130,4 +134,7 @@ averagetemps <- averagetemps %>%
 ggplotly(averagetemps)
 ```
 
-Github page created by Craig Norrie. Last updated 2 July 2024. This could be a location to have data hosted from multiple projects. 
+```{r, echo=FALSE, include=FALSE}
+carbchem <- read.csv(here("Data","carbchem.csv"))
+```
+

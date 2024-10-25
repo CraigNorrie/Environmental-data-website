@@ -28,7 +28,7 @@ aquaculturemap_hood <- leaflet() %>%
 aquaculturemap_hood
 ```
 
-<Br>Here will be a link to the raw data<Br>
+<Br>Raw data can be found [here](https://github.com/CraigNorrie/Environmental-data-website/tree/main/Data)<Br>
 
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
@@ -78,4 +78,9 @@ ggplotly(hood_do_plot)
 
 ## Carbonate Chemistry
 
+Samples were taken monthly and preserved with the addition of 200 µl of mercuric chloride. pH was determined spectrophotometrically using an ocean insights spectrophotometer. Total alkalinity was determind through volumetric titrations and the remainder of the carbonate system was paramaterised using [Seacarb in R](https://github.com/cran/seacarb).
+
+```{r}
+carbchem %>% filter(Site == "Hood Head") %>% select(-c(1,2)) %>%  arrange(Year, Month)
+```
 

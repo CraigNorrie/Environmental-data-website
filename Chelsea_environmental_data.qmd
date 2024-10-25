@@ -1,12 +1,13 @@
 ---
-title: "Chelsea environmental data"
+title: "Eld Inlet environmental data"
 format: html
 editor: source
 ---
 
 
-Background info about this. 
+This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 
 
+![Chelsea Farms, Eld Inlet,  Washington](/Images/Chelsea.jpg)
 
 ```{r, include=FALSE}
 #Load the packages required to make a local scale map
@@ -30,7 +31,7 @@ aquaculturemap_chel <- leaflet() %>%
 aquaculturemap_chel
 ```
 
-<Br>Here will be a link to the raw data<Br>
+<Br>Raw data can be found [here](https://github.com/CraigNorrie/Environmental-data-website/tree/main/Data)<Br>
 
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
@@ -80,4 +81,10 @@ ggplotly(chel_do_plot)
 
 
 ## Carbonate Chemistry
+
+Samples were taken monthly and preserved with the addition of 200 µl of mercuric chloride. pH was determined spectrophotometrically using an ocean insights spectrophotometer. Total alkalinity was determind through volumetric titrations and the remainder of the carbonate system was paramaterised using [Seacarb in R](https://github.com/cran/seacarb).
+
+```{r}
+carbchem %>% filter(Site == "Chelsea") %>% select(-c(1,2)) %>%  arrange(Year, Month)
+```
 

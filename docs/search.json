@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Data collected from aquaculture locations throughout Washington. Data displayed here has not been quality controlled. Demonstration website.\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. Can easily add more sites by adding rows to a CSV file.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 2 July 2024. This could be a location to have data hosted from multiple projects.",
+    "text": "Environmental data displayed in this repository has been collected at aquaculture locations throughout the puget sound as part of an ongoing project. Data displayed here has not been quality controlled. Suggestions for additions or alterations to this page please contact Craig Norrie - cnorrie@uw.edu\n\n\nClick each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.\n\n\n\n\n\n\n\n\n\nThe following figures allow the comparison of data across all sites over the duration that the data was collected.\n\n\nAt intertidal sites, these daily averages include time that the sensors (and therefore animals) were not in the water.\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.",
     "crumbs": [
       "Data overview",
       "Environmental data from aquaculture"
@@ -15,7 +15,7 @@
     "href": "index.html#map-of-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data. Can easily add more sites by adding rows to a CSV file.",
+    "text": "Click each location on this map to find a list of the data that has been collected at each site and the organisation that has collected this data.",
     "crumbs": [
       "Data overview",
       "Environmental data from aquaculture"
@@ -101,45 +101,45 @@
   {
     "objectID": "Chelsea_environmental_data.html",
     "href": "Chelsea_environmental_data.html",
-    "title": "Chelsea environmental data",
+    "title": "Eld Inlet environmental data",
     "section": "",
-    "text": "Background info about this.",
+    "text": "This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of",
     "crumbs": [
       "Individual site details",
-      "Chelsea environmental data"
+      "Eld Inlet environmental data"
     ]
   },
   {
     "objectID": "Chelsea_environmental_data.html#site-information",
     "href": "Chelsea_environmental_data.html#site-information",
-    "title": "Chelsea environmental data",
+    "title": "Eld Inlet environmental data",
     "section": "Site information",
-    "text": "Site information\n\n\n\n\n\n\nHere will be a link to the raw data",
+    "text": "Site information\n\n\n\n\n\n\nRaw data can be found here",
     "crumbs": [
       "Individual site details",
-      "Chelsea environmental data"
+      "Eld Inlet environmental data"
     ]
   },
   {
     "objectID": "Chelsea_environmental_data.html#temperature-data",
     "href": "Chelsea_environmental_data.html#temperature-data",
-    "title": "Chelsea environmental data",
+    "title": "Eld Inlet environmental data",
     "section": "Temperature data",
     "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nThe hobo logger was lost from this stite between August and October.",
     "crumbs": [
       "Individual site details",
-      "Chelsea environmental data"
+      "Eld Inlet environmental data"
     ]
   },
   {
     "objectID": "Chelsea_environmental_data.html#disolved-oxygen-data",
     "href": "Chelsea_environmental_data.html#disolved-oxygen-data",
-    "title": "Chelsea environmental data",
+    "title": "Eld Inlet environmental data",
     "section": "Disolved oxygen data",
     "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water",
     "crumbs": [
       "Individual site details",
-      "Chelsea environmental data"
+      "Eld Inlet environmental data"
     ]
   },
   {
@@ -147,7 +147,7 @@
     "href": "Manchester_environmental_data.html",
     "title": "Manchester environmental data",
     "section": "",
-    "text": "Data hosted in this repository has been collected as part of ongoing research at aquaculture locations throughout Washington State.",
+    "text": "Raw data can be found here",
     "crumbs": [
       "Individual site details",
       "Manchester environmental data"
@@ -157,8 +157,8 @@
     "objectID": "Manchester_environmental_data.html#site-information",
     "href": "Manchester_environmental_data.html#site-information",
     "title": "Manchester environmental data",
-    "section": "Site information",
-    "text": "Site information\n\n\n\n\n\n\nHere will be a link to the raw data",
+    "section": "",
+    "text": "Raw data can be found here",
     "crumbs": [
       "Individual site details",
       "Manchester environmental data"
@@ -180,7 +180,7 @@
     "href": "Manchester_environmental_data.html#disolved-oxygen-data",
     "title": "Manchester environmental data",
     "section": "Disolved oxygen data",
-    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated.",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a HOBO dissolved oxygen data logger. Data was collected every 15 minutes and daily averages were calculated.",
     "crumbs": [
       "Individual site details",
       "Manchester environmental data"
@@ -191,7 +191,7 @@
     "href": "index.html#comparison-of-data-across-sites",
     "title": "Environmental data from aquaculture",
     "section": "",
-    "text": "Note that these daily averages include time that individuals were out of the water at low tide sites.\n\n\n\n\n\n\nGithub page created by Craig Norrie. Last updated 2 July 2024. This could be a location to have data hosted from multiple projects.",
+    "text": "The following figures allow the comparison of data across all sites over the duration that the data was collected.\n\n\nAt intertidal sites, these daily averages include time that the sensors (and therefore animals) were not in the water.\n\n\n\n\n\n\n\n\n\nNote that these daily averages include time that individuals were out of the water at low tide sites.",
     "crumbs": [
       "Data overview",
       "Environmental data from aquaculture"
@@ -222,12 +222,12 @@
   {
     "objectID": "Chelsea_environmental_data.html#carbonate-chemistry",
     "href": "Chelsea_environmental_data.html#carbonate-chemistry",
-    "title": "Chelsea environmental data",
+    "title": "Eld Inlet environmental data",
     "section": "Carbonate Chemistry",
     "text": "Carbonate Chemistry",
     "crumbs": [
       "Individual site details",
-      "Chelsea environmental data"
+      "Eld Inlet environmental data"
     ]
   },
   {
@@ -246,7 +246,7 @@
     "href": "Hood_head_environmental_data.html#site-location",
     "title": "Hood Head environmental data",
     "section": "Site Location",
-    "text": "Site Location\n\n\n\n\n\n\nHere will be a link to the raw data",
+    "text": "Site Location\n\n\n\n\n\n\nRaw data can be found here",
     "crumbs": [
       "Individual site details",
       "Hood Head environmental data"

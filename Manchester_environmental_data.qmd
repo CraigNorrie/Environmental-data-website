@@ -5,7 +5,7 @@ editor: source
 ---
 
 
-Data hosted in this repository has been collected as part of ongoing research at aquaculture locations throughout Washington State. 
+
 
 
 ```{r, include=FALSE}
@@ -30,7 +30,7 @@ aquaculturemap_man <- leaflet() %>%
 aquaculturemap_man
 ```
 
-<Br>Here will be a link to the raw data<Br>
+<Br>Raw data can be found [here](https://github.com/CraigNorrie/Environmental-data-website/tree/main/Data)<Br>
 
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
@@ -62,7 +62,7 @@ ggplotly(man_temp_plot)
 
 ## Disolved oxygen data
 
-Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. 
+Dissolved oxygen data was collected using a [HOBO dissolved oxygen data logger](https://www.onsetcomp.com/products/data-loggers/u26-001). Data was collected every 15 minutes and daily averages were calculated. 
 
 ```{r, echo=FALSE, results='hide'}
 man_do_plot <- manav %>% 
@@ -78,4 +78,10 @@ ggplotly(man_do_plot)
 
 ## Carbonate Chemistry
 
+Samples were taken monthly and preserved with the addition of 200 µl of mercuric chloride. pH was determined spectrophotometrically using an ocean insights spectrophotometer. Total alkalinity was determind through volumetric titrations and the remainder of the carbonate system was paramaterised using [Seacarb in R](https://github.com/cran/seacarb).
+
+
+```{r}
+carbchem %>% filter(Site == "Manchester") %>% select(-c(1,2)) %>%  arrange(Year, Month)
+```
 
