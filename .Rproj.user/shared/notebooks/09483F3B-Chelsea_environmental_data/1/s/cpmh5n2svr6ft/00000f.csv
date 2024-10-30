@@ -1,7 +1,0 @@
-"0","#Sumarise the data
-#turn this into a loop that will do this for each of the cvs files that I have in the data folder
-cheldat <- read.csv(here(""Data"", ""chel_Do_Temp.csv""))#Read in the data
-"
-"2","Warning: cannot open file 'C:/Users/Craig Norrie/OneDrive - UW/Environmental data/Environmental data website/Data/chel_Do_Temp.csv': No such file or directory"
-"2","Error in file(file, ""rt"") : cannot open the connection
-"

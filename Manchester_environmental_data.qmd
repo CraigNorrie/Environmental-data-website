@@ -76,12 +76,8 @@ ggplotly(man_do_plot)
 ggplotly(man_do_plot)
 ```
 
-## Carbonate Chemistry
-
-Samples were taken monthly and preserved with the addition of 200 µl of mercuric chloride. pH was determined spectrophotometrically using an ocean insights spectrophotometer. Total alkalinity was determind through volumetric titrations and the remainder of the carbonate system was paramaterised using [Seacarb in R](https://github.com/cran/seacarb).
-
 
 ```{r}
-carbchem %>% filter(Site == "Manchester") %>% select(-c(1,2)) %>%  arrange(Year, Month)
+#carbchem %>% filter(Site == "Manchester") %>% select(-c(1,2)) %>%  arrange(Year, Month)
 ```
 

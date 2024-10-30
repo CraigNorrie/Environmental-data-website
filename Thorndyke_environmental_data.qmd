@@ -19,7 +19,7 @@ library(lubridate)
 ```
 
 # Site Location
-Sensors at Thorndyke Bay are deployed on a commercial shellfish farm. The sensors are located in an intertidal area at a tidal height of approximatley x cm. 
+Sensors at Thorndyke Bay are deployed on a commercial shellfish farm. The sensors are located in an intertidal area at a tidal height of approximately 0m above mean low tide. 
 
 ```{r, echo = FALSE, results = "hide"}
 ###Create the map
@@ -42,7 +42,7 @@ aquaculturemap_thorn <- leaflet() %>%
   addMarkers(lng = -122.734758,lat = 47.809131, popup = content_thorndyke_other) #Other
 ```
 
-I will change the basemap here so you can zoom in more
+
 
 ```{r, echo = FALSE}
 aquaculturemap_thorn
@@ -68,7 +68,7 @@ thornav <- thorndat %>%
 
 Temperature data was collected from hobo DO and temp logger.  Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. <Br>
 
-We can include additional lines with differtent colours for each of the locations within thorndyke to compare. 
+
 ```{r, echo=FALSE, results='hide'}
 Thorn_temp_plot <- thornav %>% 
   ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()

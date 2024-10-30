@@ -80,6 +80,6 @@ ggplotly(chel_do_plot)
 ```
 
 ```{r}
-carbchem %>% filter(Site == "Chelsea") %>% select(-c(1,2)) %>%  arrange(Year, Month)
+#carbchem %>% filter(Site == "Chelsea") %>% select(-c(1,2)) %>%  arrange(Year, Month)
 ```
 
