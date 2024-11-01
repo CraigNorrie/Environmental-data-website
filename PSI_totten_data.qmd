@@ -1,0 +1,51 @@
+---
+title: "Totten Inlet environmental data"
+format: html
+editor: source
+---
+
+
+This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m. Data was collected by Pacific Shellfish Institute. Contact (Andy Suhrbier)[suhrbier@pacshell.org] for mor info.
+
+
+```{r, echo=FALSE, results='hide'}
+##PSI chelsea data
+cheldat_PSI_low <- read.csv(here("Data", "Chelsea_Low_Bag_Temp_PSI_2023_2024.csv"))#Read in the data
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_low$datetime <- mdy_hm(cheldat_PSI_low$Date.Time..GMT.07.00)
+cheldat_PSI_low$date <- as.Date(cheldat_PSI_low$datetime)
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_low_dailymean_temps <- cheldat_PSI_low %>%
+  mutate(
+    date = as.Date(date, format = "%Y-%m-%d"),
+    elevation = "low"  # Add the elevation column with all values set to "low"
+  ) %>%
+  group_by(date, elevation) %>%
+  summarise(meantemp = mean(Temp_C, na.rm = TRUE), .groups = 'drop')
+
+cheldat_PSI_low_dailymean_temps %>% 
+  ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+
+
+cheldat_PSI_high <- read.csv(here("Data", "Chelsea_upper_Bag_Temp_PSI_2023_2024.csv"))#Read in the data
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_high$datetime <- mdy_hm(cheldat_PSI_high$Date.Time..GMT.07.00)
+cheldat_PSI_high$date <- as.Date(cheldat_PSI_high$datetime)
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+heldat_PSI_high_dailymean_temps <- cheldat_PSI_high %>%
+  mutate(
+    date = as.Date(date, format = "%Y-%m-%d"),
+    elevation = "High"  # Set the elevation column with all values to "High"
+  ) %>%
+  group_by(date, elevation) %>%
+  summarise(meantemp = mean(Temp_C, na.rm = TRUE), .groups = 'drop')
+
+
+#Create an overall graph with everytihg on it
+#Stack the data so that there is a low and high 
+
+tottendatall <- bind_rows(cheldat_PSI_low_dailymean_temps, cheldat_PSI_high_dailymean_temps)
+
+tottenallplot <- tottendatall %>% ggplot(aes(x=date, y = meantemp, colour = elevation))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+
+```
