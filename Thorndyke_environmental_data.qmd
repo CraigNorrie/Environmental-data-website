@@ -61,6 +61,7 @@ thornav <- thorndat %>%
   group_by(date) %>%
   summarise(meantemp = mean(Temp_C, na.rm = TRUE),
             meanDO = mean(DO_mgL, na.rm = TRUE))
+
 ```
 
 
@@ -79,6 +80,11 @@ Thorn_temp_plot <- thornav %>%
 ggplotly(Thorn_temp_plot)
 ```
 
+#PSI temperature
+
+
+
+
 ## Disolved oxygen data
 
 Dissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when sensors were emersed.
@@ -96,6 +102,6 @@ ggplotly(Thorn_do_plot)
 ```
 
 ```{r}
-carbchem %>% filter(Site == "Thorndyke") %>% select(-c(1,2)) %>%  arrange(Year, Month)
+#carbchem %>% filter(Site == "Thorndyke") %>% select(-c(1,2)) %>%  arrange(Year, Month)
 ```
 

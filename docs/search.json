@@ -37,7 +37,7 @@
     "href": "Thorndyke_environmental_data.html#temperature-data",
     "title": "Thorndyke Bay environmental data",
     "section": "Temperature data",
-    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \nWe can include additional lines with differtent colours for each of the locations within thorndyke to compare.",
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water. \n\n\n\n\n\n\n#PSI temperature",
     "crumbs": [
       "Individual site details",
       "Thorndyke Bay environmental data"
@@ -48,7 +48,7 @@
     "href": "Thorndyke_environmental_data.html#disolved-oxygen-data",
     "title": "Thorndyke Bay environmental data",
     "section": "Disolved oxygen data",
-    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when sensors were emersed.\n\n\n\n\n\n\n\n#carbchem %&gt;% filter(Site == \"Thorndyke\") %&gt;% select(-c(1,2)) %&gt;%  arrange(Year, Month)",
     "crumbs": [
       "Individual site details",
       "Thorndyke Bay environmental data"
@@ -279,5 +279,16 @@
     "title": "Eld Inlet environmental data",
     "section": "Disolved oxygen data",
     "text": "Disolved oxygen data\nDissolved oxygen data was collected using a hobo DO and temperature logger. Data was collected every 15 minutes and daily averages were calculated. Note this data includes periods of tidal emersion.\n\n\n\n\n\n\n\n#carbchem %&gt;% filter(Site == \"Chelsea\") %&gt;% select(-c(1,2)) %&gt;%  arrange(Year, Month)"
+  },
+  {
+    "objectID": "PSI_totten_data.html",
+    "href": "PSI_totten_data.html",
+    "title": "Totten Inlet environmental data",
+    "section": "",
+    "text": "This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m. Data was collected by Pacific Shellfish Institute. Contact (Andy Suhrbier)[suhrbier@pacshell.org] for mor info.\n\n\n\n\n\n\n\n\n\n\nggplotly(tottenallplot)",
+    "crumbs": [
+      "Individual site details",
+      "Totten Inlet environmental data"
+    ]
   }
 ]

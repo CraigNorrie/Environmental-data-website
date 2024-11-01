@@ -5,7 +5,20 @@ editor: source
 ---
 
 
-This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m. Data was collected by Pacific Shellfish Institute. Contact (Andy Suhrbier)[suhrbier@pacshell.org] for mor info.
+```{r, include=FALSE}
+#Load the packages required to make a local scale map
+library(tidyverse)
+library(leaflet)#package to make interactive web
+library(leaflet.providers)#allows you to add third party basemaps
+library(here)
+library(plotly)
+library(lubridate)
+```
+
+
+This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m. Data was collected by Pacific Shellfish Institute. Contact [Andy Suhrbier](suhrbier@pacshell.org) for more info. Data was collected at two tidal heights. <Br>
+Raw data can be found [here](https://github.com/CraigNorrie/Environmental-data-website/blob/main/Data/Chelsea_Upper_Bag_Temp_PSI_2023_2024.csv) for high elevation and [here](https://github.com/CraigNorrie/Environmental-data-website/blob/main/Data/Chelsea_Low_Bag_Temp_PSI_2023_2024.csv) for low elevation. 
+
 
 
 ```{r, echo=FALSE, results='hide'}
@@ -23,7 +36,7 @@ cheldat_PSI_low_dailymean_temps <- cheldat_PSI_low %>%
   group_by(date, elevation) %>%
   summarise(meantemp = mean(Temp_C, na.rm = TRUE), .groups = 'drop')
 
-cheldat_PSI_low_dailymean_temps %>% 
+#cheldat_PSI_low_dailymean_temps %>% 
   ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
 
 
@@ -32,7 +45,7 @@ cheldat_PSI_high <- read.csv(here("Data", "Chelsea_upper_Bag_Temp_PSI_2023_2024.
 cheldat_PSI_high$datetime <- mdy_hm(cheldat_PSI_high$Date.Time..GMT.07.00)
 cheldat_PSI_high$date <- as.Date(cheldat_PSI_high$datetime)
 #Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
-heldat_PSI_high_dailymean_temps <- cheldat_PSI_high %>%
+cheldat_PSI_high_dailymean_temps <- cheldat_PSI_high %>%
   mutate(
     date = as.Date(date, format = "%Y-%m-%d"),
     elevation = "High"  # Set the elevation column with all values to "High"
@@ -49,3 +62,8 @@ tottendatall <- bind_rows(cheldat_PSI_low_dailymean_temps, cheldat_PSI_high_dail
 tottenallplot <- tottendatall %>% ggplot(aes(x=date, y = meantemp, colour = elevation))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
 
 ```
+
+```{r, echo=FALSE,}
+ggplotly(tottenallplot)
+```
+
