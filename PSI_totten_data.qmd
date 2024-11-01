@@ -37,7 +37,7 @@ cheldat_PSI_low_dailymean_temps <- cheldat_PSI_low %>%
   summarise(meantemp = mean(Temp_C, na.rm = TRUE), .groups = 'drop')
 
 #cheldat_PSI_low_dailymean_temps %>% 
-  ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+  #ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
 
 
 cheldat_PSI_high <- read.csv(here("Data", "Chelsea_upper_Bag_Temp_PSI_2023_2024.csv"))#Read in the data

@@ -285,7 +285,7 @@
     "href": "PSI_totten_data.html",
     "title": "Totten Inlet environmental data",
     "section": "",
-    "text": "This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m. Data was collected by Pacific Shellfish Institute. Contact (Andy Suhrbier)[suhrbier@pacshell.org] for mor info.\n\n\n\n\n\n\n\n\n\n\nggplotly(tottenallplot)",
+    "text": "This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Sensors were attached in the intertidal zone at a tidal height of 0 m. Data was collected by Pacific Shellfish Institute. Contact Andy Suhrbier for more info. Data was collected at two tidal heights.  Raw data can be found here for high elevation and here for low elevation.",
     "crumbs": [
       "Individual site details",
       "Totten Inlet environmental data"
