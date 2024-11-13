@@ -16,7 +16,7 @@ library(lubridate)
 ```
 
 
-This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Data was collected by Pacific Shellfish Institute. Contact [Andy Suhrbier](suhrbier@pacshell.org) for more info. Data was collected in the intertidal at two tidal heights. Low and high elevation data was collected at a tital height of -0.61 m (-2ft) and at 0.91 m (+3 ft). <Br>
+This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Data was collected by Pacific Shellfish Institute. Contact [Andy Suhrbier](suhrbier@pacshell.org) for more info. Data was collected in the intertidal at two tidal heights. Low and high elevation data was collected at a tidal height of -0.61 m (-2ft) and at 0.91 m (+3 ft). <Br>
 Raw data can be found [here](https://github.com/CraigNorrie/Environmental-data-website/blob/main/Data/Chelsea_Upper_Bag_Temp_PSI_2023_2024.csv) for high elevation and [here](https://github.com/CraigNorrie/Environmental-data-website/blob/main/Data/Chelsea_Low_Bag_Temp_PSI_2023_2024.csv) for low elevation. 
 
 
