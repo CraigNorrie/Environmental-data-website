@@ -38,6 +38,11 @@ aquaculturemap_chel
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
 cheldat <- read.csv(here("Data", "chelsea_Do_Temp.csv"))#Read in the data
 cheldat$datetime <- mdy_hm(cheldat$Date.Time..GMT.07.00)
+
+#input data from 
+#Rocky point is the closest tidal gauge
+
+
 #Obtain daily mean data - this should probably be done in a separate script and this should be saved for the website only
 chelav <- cheldat %>%
   mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
@@ -65,6 +70,7 @@ ggplotly(chel_temp_plot)
 ```
 
 ## Disolved oxygen data
+
 
 Dissolved oxygen data was collected using a hobo DO and temperature logger. Data was collected every 15 minutes and daily averages were calculated. Note this data includes periods of tidal emersion. 
 
