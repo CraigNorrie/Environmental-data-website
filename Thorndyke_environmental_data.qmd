@@ -53,15 +53,21 @@ aquaculturemap_thorn
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
-thorndat <- read.csv(here("Data", "thorn_Do_Temp.csv"))#Read in the data
+thorndat <- read.csv(here("Data","allthorndat_tides.csv"))#Read in the data
+
 thorndat$datetime <- mdy_hm(thorndat$Date.Time..GMT.07.00)
 #Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
 thornav <- thorndat %>%
   mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
   group_by(date) %>%
   summarise(meantemp = mean(Temp_C, na.rm = TRUE),
-            meanDO = mean(DO_mgL, na.rm = TRUE))
+    meanDO = mean(DO_mgL[water_level > -0.5], na.rm = TRUE))
 
+
+# chelav <- allcheldat %>% group_by(date) %>% summarise(
+#     meantemp = mean(Temp_C, na.rm = TRUE),
+#     meanDO = mean(DO_mgL[water_level > -0.5], na.rm = TRUE)#Filtered to only obtain data when the sensor was wet
+#   )
 ```
 
 
@@ -101,7 +107,7 @@ ggplotly(Thorn_do_plot)
 ggplotly(Thorn_do_plot)
 ```
 
-```{r}
+```{r, echo = FALSE}
 #carbchem %>% filter(Site == "Thorndyke") %>% select(-c(1,2)) %>%  arrange(Year, Month)
 ```
 

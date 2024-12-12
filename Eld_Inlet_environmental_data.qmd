@@ -36,7 +36,7 @@ aquaculturemap_chel
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
-cheldat <- read.csv(here("Data", "chelsea_Do_Temp.csv"))#Read in the data
+cheldat <- read.csv(here("Data", "allelddat_tides.csv"))#Read in the data
 cheldat$datetime <- mdy_hm(cheldat$Date.Time..GMT.07.00)
 
 #input data from 
@@ -44,11 +44,10 @@ cheldat$datetime <- mdy_hm(cheldat$Date.Time..GMT.07.00)
 
 
 #Obtain daily mean data - this should probably be done in a separate script and this should be saved for the website only
-chelav <- cheldat %>%
-  mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
+chelav <- cheldat %>% mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
   group_by(date) %>%
   summarise(meantemp = mean(Temp_C, na.rm = TRUE),
-            meanDO = mean(DO_mgL, na.rm = TRUE))
+    meanDO = mean(DO_mgL[water_level > -0.5], na.rm = TRUE))
 ```
 
 
