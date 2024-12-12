@@ -36,9 +36,10 @@ aquaculturemap_chel
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
-cheldat <- read.csv(here("Data", "allelddat_tides.csv"))#Read in the data
+cheldat <- read.csv(here("Data", "allcheldat_tides.csv"))#Read in the data
+cheldat_psi <- read.csv(here("Data", "Eld_Low_Flip_DO_PSI.csv"))#Read in the data
 cheldat$datetime <- mdy_hm(cheldat$Date.Time..GMT.07.00)
-
+cheldat_psi$datetime <- mdy_hm(cheldat_psi$Date.Time..GMT.07.00)
 #input data from 
 #Rocky point is the closest tidal gauge
 

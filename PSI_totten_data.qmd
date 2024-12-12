@@ -75,4 +75,32 @@ tottenallplot <- tottendatall %>% ggplot(aes(x=date, y = meantemp, colour = elev
 ggplotly(tottenallplot)
 ```
 
-The oxygen data below was collected at a tidal height of -2 ft and has been standardised to only include data collected while the sensor was underwater.
+The oxygen data below was collected at a tidal height of -2 ft and has been standardized to only include data collected while the sensor was underwater.
+
+```{r, echo=FALSE,}
+totdadat <- read.csv(here("Data","Totten_LOW_DO_tide.csv"))%>% 
+  select(Date.Time..GMT.07.00, Temp_C, Dissolved_Oxygen_mg_l, Site, Tide..ft.) %>% 
+  mutate(DO_mgL = Dissolved_Oxygen_mg_l,
+         water_level = Tide..ft. )
+
+totdadat <- totdadat %>% 
+  mutate(datetime = parse_date_time(Date.Time..GMT.07.00, orders = c("mdy_HM", "ymd_HM")))#Checks both date formats
+totdadat$date <- as.Date(totdadat$datetime)
+
+totav_ind <- totdadat %>% group_by(date) %>% summarise(
+    meantemp = mean(Temp_C, na.rm = TRUE),
+    meanDO = mean(DO_mgL[water_level > -2], na.rm = TRUE)
+  )
+
+tot_avergage_DO_plot <- totav_ind %>% 
+  filter(date > "2023-06-08") %>% #filter(date < "2023-10-17") %>% 
+  ggplot(aes(x= date , y = meanDO)) + geom_line()+
+  theme_bw()+ylab("Daily Mean Dissolved Oxygen (mg / L)")+xlab("Date")+
+  theme(axis.title.y=element_text())+
+  theme(
+    text = element_text(size = 14))
+```
+
+```{r, echo = FALSE}
+ggplotly(tot_avergage_DO_plot)
+```
