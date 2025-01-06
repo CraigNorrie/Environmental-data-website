@@ -306,5 +306,49 @@
       "Individual site details",
       "Totten Inlet environmental data"
     ]
+  },
+  {
+    "objectID": "ClamBay_environmental_data.html",
+    "href": "ClamBay_environmental_data.html",
+    "title": "Clam Bay environmental data",
+    "section": "",
+    "text": "Raw data can be found here",
+    "crumbs": [
+      "Individual site details",
+      "Clam Bay environmental data"
+    ]
+  },
+  {
+    "objectID": "ClamBay_environmental_data.html#site-information",
+    "href": "ClamBay_environmental_data.html#site-information",
+    "title": "Clam Bay environmental data",
+    "section": "",
+    "text": "Raw data can be found here",
+    "crumbs": [
+      "Individual site details",
+      "Clam Bay environmental data"
+    ]
+  },
+  {
+    "objectID": "ClamBay_environmental_data.html#temperature-data",
+    "href": "ClamBay_environmental_data.html#temperature-data",
+    "title": "Clam Bay environmental data",
+    "section": "Temperature data",
+    "text": "Temperature data\nTemperature data was collected from hobo DO and temp logger. Data was collected every 15 minutes and daily averages were calculated. Note this data included information from when individuals were out of the water.",
+    "crumbs": [
+      "Individual site details",
+      "Clam Bay environmental data"
+    ]
+  },
+  {
+    "objectID": "ClamBay_environmental_data.html#disolved-oxygen-data",
+    "href": "ClamBay_environmental_data.html#disolved-oxygen-data",
+    "title": "Clam Bay environmental data",
+    "section": "Disolved oxygen data",
+    "text": "Disolved oxygen data\nDissolved oxygen data was collected using a HOBO dissolved oxygen data logger. Data was collected every 15 minutes and daily averages were calculated.\n\n\n\n\n\n\n\n#carbchem %&gt;% filter(Site == \"Manchester\") %&gt;% select(-c(1,2)) %&gt;%  arrange(Year, Month)",
+    "crumbs": [
+      "Individual site details",
+      "Clam Bay environmental data"
+    ]
   }
 ]

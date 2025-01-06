@@ -55,11 +55,12 @@ At intertidal sites, these daily averages include time that the sensors were not
 ```{r, include=FALSE}
 #Create averages
 ##read in the data 
-allthorndat <- read.csv(here("Data","allthorndat_tides.csv"))
-allcheldat <- read.csv(here("Data","allcheldat_tides.csv"))
-allhooddat <- read.csv(here("Data","hood_Do_Temp.csv"))
-allmandat <- read.csv(here("Data","man_Do_Temp.csv"))
-alltotdat <- read.csv(here("Data","Totten_LOW_DO_tide.csv"))%>% 
+allthorndat <- read.csv(here("Data/Thorndyke","UW_THORNDYKE_DO_TEMP_WATERLEVEL_2023_2024.csv"))
+allcheldat <- read.csv(here("Data/Eld","UW_ELD_DO_TEMP_WATERLEVEL_2023_2024.csv"))
+allhooddat <- read.csv(here("Data/Hood Head","UW_HOODHEAD_DO_TEMP_2023_2024.csv"))
+allmandat <- read.csv(here("Data/Clam Bay","UW_CLAMBAY_DO_TEMP_2023_2024.csv"))
+#Totten inlet data is in a slightly different format to the other UW data
+alltotdat <- read.csv(here("Data/Totten","PSI_TOTTENINLET_DO_WATERLEVEL_lowerbags_2023_2024.csv"))%>% 
   select(Date.Time..GMT.07.00, Temp_C, Dissolved_Oxygen_mg_l, Site, Tide..ft.) %>% 
   mutate(DO_mgL = Dissolved_Oxygen_mg_l,
          water_level = Tide..ft. )
@@ -71,10 +72,11 @@ allmandat$datetime  <- mdy_hm(allmandat$Date.Time..GMT.07.00)
 alltotdat <- alltotdat %>% 
   mutate(datetime = parse_date_time(Date.Time..GMT.07.00, orders = c("mdy_HM", "ymd_HM")))#Checks both date formats
 #add a site column to each of the DFs
-allcheldat <- allcheldat %>% mutate(Site = "Chelsea")
-allthorndat <- allthorndat %>% mutate(Site = "Thorndyke")
-allhooddat <- allhooddat %>% mutate(Site = "Hood_Head")
-allmandat <- allmandat %>% mutate(Site = "Manchester")
+allcheldat <- allcheldat %>% mutate(Site = "Eld Inlet")
+allthorndat <- allthorndat %>% mutate(Site = "Thorndyke Bay")
+allhooddat <- allhooddat %>% mutate(Site = "Hood Head")
+allmandat <- allmandat %>% mutate(Site = "Clam Bay")
+alltotdat <- alltotdat %>% mutate(Site = "Totten Inlet")
 #add a date column to the two dfs
 allcheldat$date <- as.Date(allcheldat$datetime)
 allthorndat$date <- as.Date(allthorndat$datetime)

@@ -16,5 +16,5 @@ website:
           - Thorndyke_environmental_data.qmd
           - Hood_head_environmental_data.qmd
           - Eld_Inlet_environmental_data.qmd
-          - Manchester_environmental_data.qmd
-          - PSI_totten_data.qmd
+          - ClamBay_environmental_data.qmd
+          - Totten_data.qmd

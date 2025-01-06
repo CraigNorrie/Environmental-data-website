@@ -36,19 +36,23 @@ aquaculturemap_chel
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
-cheldat <- read.csv(here("Data", "allcheldat_tides.csv"))#Read in the data
-cheldat_psi <- read.csv(here("Data", "Eld_Low_Flip_DO_PSI.csv"))#Read in the data
-cheldat$datetime <- mdy_hm(cheldat$Date.Time..GMT.07.00)
-cheldat_psi$datetime <- mdy_hm(cheldat_psi$Date.Time..GMT.07.00)
+elddat_UW <- read.csv(here("Data/Eld", "UW_ELD_DO_TEMP_WATERLEVEL_2023_2024.csv"))#Read in the data
+elddat_PSI <- read.csv(here("Data/Eld", "PSI_ELD_DO_TEMP_WATERLEVEL_Lowerflipbags_2023_2024.csv")) %>%  #Read in the data
+  select(Date.Time..GMT.07.00, Temperature_C, Dissolved.Oxygen_mg.l, Tide_ft)
+#chaldat_exo_psi <- read.csv(here("Data/Eld", "PSI_ELD_DO_TEMP_WATERLEVEL_Lowerflipbags_2023_2024.csv"))#Read in the data
+elddat_UW$datetime <- mdy_hm(elddat_UW$Date.Time..GMT.07.00)
+elddat_PSI$datetime <- mdy_hm(elddat_PSI$Date.Time..GMT.07.00)
 #input data from 
-#Rocky point is the closest tidal gauge
-
-
 #Obtain daily mean data - this should probably be done in a separate script and this should be saved for the website only
-chelav <- cheldat %>% mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
+eldav_UW <- elddat_UW %>% mutate(date = as.Date(date, format = "%Y-%m-%d")) %>%
   group_by(date) %>%
   summarise(meantemp = mean(Temp_C, na.rm = TRUE),
     meanDO = mean(DO_mgL[water_level > -0.5], na.rm = TRUE))
+
+eldav_PSI <- elddat_PSI %>% mutate(date = as.Date(Date.Time..GMT.07.00, format = "%m/%d/%Y %H:%M")) %>%
+  group_by(date) %>%
+  summarise(meantemp = mean(Temperature_C, na.rm = TRUE),
+    meanDO = mean(Dissolved.Oxygen_mg.l[Tide_ft > -0.5], na.rm = TRUE))
 ```
 
 
@@ -59,14 +63,20 @@ Temperature data was collected from hobo DO and temp logger.  Data was collected
 The hobo logger was lost from this stite between August and October.
 
 ```{r, echo=FALSE, results='hide'}
-chel_temp_plot <- chelav %>% 
-  ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+eld_temp_plot <- ggplot() +
+  geom_line(data = eldav_UW, aes(x = date, y = meantemp, color = "UW")) +
+  geom_line(data = eldav_PSI, aes(x = date, y = meantemp, color = "PSI")) +
+  xlab("Date") +
+  ylab("Temperature (°C)") +
+  theme_bw() +
+  scale_color_manual(name = "Source", values = c("UW" = "blue", "PSI" = "red")) # Optional: Custom colors
+
 
 ```
 
 
 ```{r, echo = FALSE}
-ggplotly(chel_temp_plot)
+ggplotly(eld_temp_plot)
 ```
 
 ## Disolved oxygen data
@@ -75,8 +85,17 @@ ggplotly(chel_temp_plot)
 Dissolved oxygen data was collected using a hobo DO and temperature logger. Data was collected every 15 minutes and daily averages were calculated. Note this data includes periods of tidal emersion. 
 
 ```{r, echo=FALSE, results='hide'}
-chel_do_plot <- chelav %>% 
-  ggplot(aes(x = date, y = meanDO))+geom_line()+xlab("Date")+ylab("Disolved oxygen (mg/L)")+theme_bw()
+chel_do_plot <- ggplot() +
+  geom_line(data = eldav_UW, aes(x = date, y = meanDO, color = "UW")) +
+  geom_line(data = eldav_PSI, aes(x = date, y = meanDO, color = "PSI")) +
+  xlab("Date") +
+  ylab("Dissolved Oxygen (mg/L)") +
+  theme_bw() +
+  scale_color_manual(
+    name = "Source",
+    values = c("UW" = "blue", "PSI" = "red"),
+    labels = c("UW" = "UW Data", "PSI" = "PSI Data")
+  )
 
 ggplotly(chel_do_plot)
 

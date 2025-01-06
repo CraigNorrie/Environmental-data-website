@@ -33,7 +33,7 @@ aquaculturemap_hood
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
-hooddat <- read.csv(here("Data", "hood_Do_Temp.csv"))#Read in the data
+hooddat <- read.csv(here("Data/Hood Head", "UW_HOODHEAD_DO_TEMP_2023_2024.csv"))#Read in the data
 hooddat$datetime <- mdy_hm(hooddat$Date.Time..GMT.07.00)
 #Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
 hoodav <- hooddat %>%

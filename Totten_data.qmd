@@ -1,0 +1,106 @@
+---
+title: "Totten Inlet environmental data"
+format: html
+editor: source
+---
+
+
+```{r, include=FALSE}
+#Load the packages required to make a local scale map
+library(tidyverse)
+library(leaflet)#package to make interactive web
+library(leaflet.providers)#allows you to add third party basemaps
+library(here)
+library(plotly)
+library(lubridate)
+```
+
+
+```{r, echo=FALSE, results='hide'}
+aquaculturemap_tot <- leaflet() %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) %>%
+  addMarkers(lng = -122.9917561,lat = 47.1475359, popup = "Totten Inlet - Chelsea Farms")
+```
+
+
+This site is located in South Puget Sound. Environmental data is collected from an intertidal shellfish farm. Data was collected by Pacific Shellfish Institute. Contact [Andy Suhrbier](suhrbier@pacshell.org) for more info. Data was collected in the intertidal at two tidal heights. Low and high elevation data was collected at a tidal height of -0.61 m (-2ft) and at 0.91 m (+3 ft), respectivley. <Br>
+
+Raw data can be found [here](https://github.com/CraigNorrie/Environmental-data-website/blob/main/Data/Chelsea_Upper_Bag_Temp_PSI_2023_2024.csv) for high elevation and [here](https://github.com/CraigNorrie/Environmental-data-website/blob/main/Data/Chelsea_Low_Bag_Temp_PSI_2023_2024.csv) for low elevation. 
+
+
+
+```{r, echo=FALSE, results='hide'}
+##PSI chelsea data
+cheldat_PSI_low <- read.csv(here("Data/Totten", "PSI_TOTTEN_TEMP_lowerbags_2023_2024.csv"))#Read in the data
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_low$datetime <- mdy_hm(cheldat_PSI_low$Date.Time..GMT.07.00)
+cheldat_PSI_low$date <- as.Date(cheldat_PSI_low$datetime)
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_low_dailymean_temps <- cheldat_PSI_low %>%
+  mutate(
+    date = as.Date(date, format = "%Y-%m-%d"),
+    elevation = "low"  # Add the elevation column with all values set to "low"
+  ) %>%
+  group_by(date, elevation) %>%
+  summarise(meantemp = mean(Temp_C, na.rm = TRUE), .groups = 'drop')
+
+#cheldat_PSI_low_dailymean_temps %>% 
+  #ggplot(aes(x = date, y = meantemp))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+
+
+cheldat_PSI_high <- read.csv(here("Data/Totten", "PSI_TOTTEN_TEMP_upperbags_2023_2024.csv"))#Read in the data
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_high$datetime <- mdy_hm(cheldat_PSI_high$Date.Time..GMT.07.00)
+cheldat_PSI_high$date <- as.Date(cheldat_PSI_high$datetime)
+#Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
+cheldat_PSI_high_dailymean_temps <- cheldat_PSI_high %>%
+  mutate(
+    date = as.Date(date, format = "%Y-%m-%d"),
+    elevation = "High"  # Set the elevation column with all values to "High"
+  ) %>%
+  group_by(date, elevation) %>%
+  summarise(meantemp = mean(Temp_C, na.rm = TRUE), .groups = 'drop')
+
+
+#Create an overall graph with everytihg on it
+#Stack the data so that there is a low and high 
+
+tottendatall <- bind_rows(cheldat_PSI_low_dailymean_temps, cheldat_PSI_high_dailymean_temps)
+
+tottenallplot <- tottendatall %>% ggplot(aes(x=date, y = meantemp, colour = elevation))+geom_line()+xlab("Date")+ylab("Temperature (°C)")+theme_bw()
+
+```
+
+```{r, echo=FALSE,}
+ggplotly(tottenallplot)
+```
+
+The oxygen data below was collected at a tidal height of -2 ft and has been standardized to only include data collected while the sensor was underwater.
+
+```{r, echo=FALSE,}
+totdadat <- read.csv(here("Data/Totten","PSI_TOTTEN_DO_WATERLEVEL_lowerbags_2023_2024.csv"))%>% 
+  select(Date.Time..GMT.07.00, Temp_C, Dissolved_Oxygen_mg_l, Site, Tide..ft.) %>% 
+  mutate(DO_mgL = Dissolved_Oxygen_mg_l,
+         water_level = Tide..ft. )
+
+totdadat <- totdadat %>% 
+  mutate(datetime = parse_date_time(Date.Time..GMT.07.00, orders = c("mdy_HM", "ymd_HM")))#Checks both date formats
+totdadat$date <- as.Date(totdadat$datetime)
+
+totav_ind <- totdadat %>% group_by(date) %>% summarise(
+    meantemp = mean(Temp_C, na.rm = TRUE),
+    meanDO = mean(DO_mgL[water_level > -2], na.rm = TRUE)
+  )
+
+tot_avergage_DO_plot <- totav_ind %>% 
+  filter(date > "2023-06-08") %>% #filter(date < "2023-10-17") %>% 
+  ggplot(aes(x= date , y = meanDO)) + geom_line()+
+  theme_bw()+ylab("Daily Mean Dissolved Oxygen (mg / L)")+xlab("Date")+
+  theme(axis.title.y=element_text())+
+  theme(
+    text = element_text(size = 14))
+```
+
+```{r, echo = FALSE}
+ggplotly(tot_avergage_DO_plot)
+```

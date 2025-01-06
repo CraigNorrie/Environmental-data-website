@@ -53,7 +53,7 @@ aquaculturemap_thorn
 ```{r, echo=FALSE, results='hide'}
 #Sumarise the data
 #turn this into a loop that will do this for each of the cvs files that I have in the data folder
-thorndat <- read.csv(here("Data","allthorndat_tides.csv"))#Read in the data
+thorndat <- read.csv(here("Data/Thorndyke","UW_THORNDYKE_DO_TEMP_WATERLEVEL_2023_2024.csv"))#Read in the data
 
 thorndat$datetime <- mdy_hm(thorndat$Date.Time..GMT.07.00)
 #Obtain daily mean data - this should probably be done in a seperate script and this should be saved for the website only
